@@ -8,8 +8,8 @@ public class LevelTileScript : MonoBehaviour
     public GameObject hasBeenCollider;
     public GameObject playerObject;
 
-    bool doNotDestroy = false;
-    bool distanceToDestroy = false;
+    private bool doNotDestroy = false;
+    private bool distanceToDestroy = false;
 
     float destroyDistance = 20;
     public float currentDistanceToPlayer;
@@ -20,10 +20,10 @@ public class LevelTileScript : MonoBehaviour
     float planeLocationX;
     float planeLocationZ;
 
-
     // Start is called before the first frame update
     void Start()
     {
+
         hasBeenCollider = GameObject.Find("hasBeenBoolCheck");
         playerObject = GameObject.Find("Player");
         playerDistanceX = playerObject.transform.position.x;
@@ -35,14 +35,30 @@ public class LevelTileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentDistanceToPlayer = Mathf.Sqrt(Mathf.Abs(playerDistanceZ - planeLocationZ) 
+        playerDistanceX = playerObject.transform.position.x;
+        playerDistanceZ = playerObject.transform.position.z;
+        planeLocationX = this.transform.position.x;
+        planeLocationZ = this.transform.position.z;
+
+        currentDistanceToPlayer = Mathf.Sqrt(Mathf.Abs(playerDistanceX - planeLocationX) 
                                             + Mathf.Abs(playerDistanceZ - planeLocationZ));
 
+        Debug.Log("currentDistanceToPlayer: " + currentDistanceToPlayer);
 
+        if(currentDistanceToPlayer > destroyDistance)
+        {
+            if (!doNotDestroy)
+            {
+            }
+                Destroy(this);
+        }
     }
 
-    void DestroyPlatform()
+    private void OnCollisionEnter(Collision collider)
     {
-
+        if(collider.gameObject = hasBeenCollider)
+        {
+            doNotDestroy = true;
+        }
     }
 }

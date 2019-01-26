@@ -65,8 +65,8 @@ public class ExplorationScript : MonoBehaviour
 
     void tryToMakeTile(GameObject tileToSpawn, Vector3 newTileLocation)
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(newTileLocation, 5);
+        //Gizmos.color = Color.red;
+        //Gizmos.DrawSphere(newTileLocation, 5);
         if (!(Physics.CheckSphere(newTileLocation, 10)))
         {
             GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation, Quaternion.identity);

@@ -10,7 +10,7 @@ public class LevelTileScript : MonoBehaviour
 
     private bool destroyThis = true;
 
-    float destroyDistance = 20;
+    public float destroyDistance = 20;
     public float currentDistanceToPlayer;
 
 

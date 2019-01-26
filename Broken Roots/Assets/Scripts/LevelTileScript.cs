@@ -48,12 +48,13 @@ public class LevelTileScript : MonoBehaviour
         if(currentDistanceToPlayer > destroyDistance)
         {
             distanceToDestroy = true;
+
             Debug.Log("DistanceToDestroy: " + distanceToDestroy);
             if (distanceToDestroy && !destroyThis)
             {
+                Destroy(this);
             }
 
-            Destroy(this);
         }
     }
 

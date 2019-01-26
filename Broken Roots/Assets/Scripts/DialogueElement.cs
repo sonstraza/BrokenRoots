@@ -9,7 +9,12 @@ public class DialogueElement: MonoBehaviour
     public Characters Character;
     public AvatarPos CharacterPosition;
     public Texture2D CharacterPic;
-    public string DialogueText;
+
+    [TextArea(3, 10)]
+    public string[] IntroText;
+    [TextArea(3, 10)]
+    public string[] KeyItem1Text;
+    
     public GUIStyle DialogueTextStyle;
     public float TextPlayBackSpeed;
     public AudioClip PlayBackSoundFile;

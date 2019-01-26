@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class hasBeenCheck : MonoBehaviour
 {
-    [Header ("Show in Inspector")]
-
-    bool hasEntered = false;
-    GameObject currentSquare;
-
-
+    //[Header ("Show in Inspector")]
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +20,6 @@ public class hasBeenCheck : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        hasEntered = true;
+
     }
 }

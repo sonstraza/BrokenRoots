@@ -5,7 +5,8 @@ using UnityEngine;
 public class ExploreGameManager : MonoBehaviour
 {
     public static ExploreGameManager instance = null;
-    public GameObject[] listOfExplorationTiles;
+    public GameObject[] FogTileArray;
+    public GameObject[] ExplorationTileArray;
 
     void Awake()
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class hasBeenCheck : MonoBehaviour
 {
     [Header ("Show in Inspector")]
+
     bool hasEntered = false;
     GameObject currentSquare;
 

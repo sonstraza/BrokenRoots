@@ -4,15 +4,45 @@ using UnityEngine;
 
 public class LevelTileScript : MonoBehaviour
 {
+    [Header("Show in Inspector")]
+    public GameObject hasBeenCollider;
+    public GameObject playerObject;
+
+    bool doNotDestroy = false;
+    bool distanceToDestroy = false;
+
+    float destroyDistance = 20;
+    public float currentDistanceToPlayer;
+
+
+    float playerDistanceX;
+    float playerDistanceZ;
+    float planeLocationX;
+    float planeLocationZ;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        hasBeenCollider = GameObject.Find("hasBeenBoolCheck");
+        playerObject = GameObject.Find("Player");
+        playerDistanceX = playerObject.transform.position.x;
+        playerDistanceZ = playerObject.transform.position.z;
+        planeLocationX = this.transform.position.x;
+        planeLocationZ = this.transform.position.z;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        currentDistanceToPlayer = Mathf.Sqrt(Mathf.Abs(playerDistanceZ - planeLocationZ) 
+                                            + Mathf.Abs(playerDistanceZ - planeLocationZ));
+
+
+    }
+
+    void DestroyPlatform()
+    {
+
     }
 }

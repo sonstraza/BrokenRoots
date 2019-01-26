@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class hasBeenCheck : MonoBehaviour
 {
+    bool hasEntered = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,10 @@ public class hasBeenCheck : MonoBehaviour
     void Update()
     {
         
+    }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        hasEntered = true;
     }
 }

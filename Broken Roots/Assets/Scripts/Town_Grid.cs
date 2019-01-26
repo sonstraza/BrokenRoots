@@ -1,57 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class RandomMap : MonoBehaviour
+public class WorldSpawn : MonoBehaviour
 {
 
-    [Tooltip("Rows and cols for the map grid")]
-    public Vector2 myGrid;
+    public GameObject block1;
 
-    [Tooltip("Prefabs dimensions in Unity units")]
-    public Vector3 tileDimensions;
+    public int worldWidth = 10;
+    public int worldHeight = 10;
 
-    [Tooltip("Populate with all the prefabs used to generate map")]
-    public GameObject[] prefabTiles;
+    public float spawnSpeed = 0;
 
-    // storing the map tiles in a list could be useful
-    List<GameObject> mapList = new List<GameObject>();
-
-    // Use this for initialization
     void Start()
     {
-        CreateMap();
-        InvokeRepeating("FunkyTiles", 0f, 0.05f);
+        StartCoroutine(CreateWorld());
     }
 
-    void CreateMap()
+    IEnumerator CreateWorld()
     {
-        for (int row = 1; row <= myGrid.y; row++)
+        for (int x = 0; x < worldWidth; x++)
         {
-            for (int col = 1; col <= myGrid.x; col++)
+            yield return new WaitForSeconds(spawnSpeed);
+
+            for (int z = 0; z < worldHeight; z++)
             {
-                // choose a random prefab tile
-                int n = Random.Range(0, prefabTiles.Length);
-                GameObject thePrefab = prefabTiles[n];
+                yield return new WaitForSeconds(spawnSpeed);
 
-                // spawns the tile
-                GameObject theTile = Instantiate(thePrefab, transform);
-                theTile.name = "Tile_" + col + "_" + row;
-                theTile.transform.localPosition = new Vector3((col - 1) * tileDimensions.x, 0f, (row - 1) * tileDimensions.z);
-
-                // stores the tile in the List
-                mapList.Add(theTile);
+                GameObject block = Instantiate(block1, Vector3.zero, block1.transform.rotation) as GameObject;
+                block.transform.parent = transform;
+                block.transform.localPosition = new Vector3(x, 0, z);
             }
         }
-        print(mapList.Count + " tiles in the map");
-    }
-
-    void FunkyTiles()
-    {
-        int n = Random.Range(0, mapList.Count);
-        GameObject theTile = mapList[n];
-        Vector3 temp = theTile.transform.localPosition;
-        temp.y = Random.Range(-0.25f, 0.25f);
-        theTile.transform.localPosition = temp;
     }
 }

@@ -175,17 +175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dcadaadb3f4a2745a0c4a5e7637474c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listOfExplorationTiles:
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
+  FogTileArray: []
+  ExplorationTileArray: []
 --- !u!1 &1507667304
 GameObject:
   m_ObjectHideFlags: 0

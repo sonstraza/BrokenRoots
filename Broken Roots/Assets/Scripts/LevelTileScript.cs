@@ -45,14 +45,14 @@ public class LevelTileScript : MonoBehaviour
 
         Debug.Log("currentDistanceToPlayer: " + currentDistanceToPlayer);
 
-        if(currentDistanceToPlayer > destroyDistance)
+        if(currentDistanceToPlayer >= destroyDistance)
         {
             distanceToDestroy = true;
 
             Debug.Log("DistanceToDestroy: " + distanceToDestroy);
             if (distanceToDestroy && !destroyThis)
             {
-                Destroy(this);
+                Destroy(this.gameObject);
             }
 
         }

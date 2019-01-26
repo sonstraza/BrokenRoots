@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
+    public Transform[] LeftRight;
+    public Transform[] TopBottom;
+    public Transform[] Circle;
+
+    public enum Motion { LeftRight, TopBottom, Circle };
+    public Motion motion;
+
     private Transform[] motionPathTargets;
+    
     private DialogueElement dialogueElement;
     private bool canMove = true;
     private int currentPosition;
@@ -15,12 +23,13 @@ public class NPC : MonoBehaviour
     void Start()
     {
         dialogueElement = GetComponent<DialogueElement>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.position != motionPathTargets[currentPosition].position)
+        if((transform.position != motionPathTargets[currentPosition].position) && canMove)
         {
             Vector3 pos = Vector3.MoveTowards(transform.position, motionPathTargets[currentPosition].position, speed);
 

@@ -8,7 +8,7 @@ public class LevelTileScript : MonoBehaviour
     public GameObject hasBeenCollider;
     public GameObject playerObject;
 
-    private bool doNotDestroy = false;
+    private bool destroyThis = false;
     private bool distanceToDestroy = false;
 
     float destroyDistance = 20;
@@ -47,18 +47,21 @@ public class LevelTileScript : MonoBehaviour
 
         if(currentDistanceToPlayer > destroyDistance)
         {
-            if (!doNotDestroy)
+            distanceToDestroy = true;
+            Debug.Log("DistanceToDestroy: " + distanceToDestroy);
+            if (distanceToDestroy && !destroyThis)
             {
             }
-                Destroy(this);
+
+            Destroy(this);
         }
     }
 
     private void OnCollisionEnter(Collision collider)
     {
-        if(collider.gameObject = hasBeenCollider)
+       if(collider.gameObject.name == "hasBeenBoolCheck")
         {
-            doNotDestroy = true;
+            destroyThis = true;
         }
     }
 }

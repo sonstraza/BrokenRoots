@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hasBeenCheck : MonoBehaviour
+public class ExploreGameManager : MonoBehaviour
 {
-    [Header ("Show in Inspector")]
-
-    bool hasEntered = false;
-    GameObject currentSquare;
-
+    public static ExploreGameManager instance = null;
+    public GameObject[] listOfExplorationTiles;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +17,5 @@ public class hasBeenCheck : MonoBehaviour
     void Update()
     {
         
-    }
-    
-    private void OnCollisionEnter(Collision collision)
-    {
-        hasEntered = true;
     }
 }

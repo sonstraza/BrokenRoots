@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class miniMap : MonoBehaviour
 {
-    bool miniMapOn = false;
     GameObject miniMapCam;
     // Start is called before the first frame update
     void Start()

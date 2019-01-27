@@ -33,18 +33,13 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("Town");
     }
 
-    public void LoadMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
-
     public void SaveGame()
     {
-        //fill in
+        Data.SaveGame();
     }
     public void LoadGame()
     {
-        //fill in
+        Data.LoadGame();
     }
 
     public void Resume()

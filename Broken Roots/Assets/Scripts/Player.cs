@@ -41,11 +41,15 @@ public class Player : MonoBehaviour
 
 
     #endregion
+
+    public AudioSource audioSource;
+    
     // Start is called before the first frame update
     void Start()
     {
         canMove = true;
         keyItems = new Dictionary<Characters, bool>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()

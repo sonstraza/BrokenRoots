@@ -1,22 +1,44 @@
 fileFormatVersion: 2
-guid: ab486f55a8fbe734a9e6f056322082a0
+guid: f5c96c49435c88148a1faa36f943dd8e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: fence:polySurface39
-    400000: //RootNode
-    400002: fence:polySurface39
-    2100000: fence_polySurface39Mat
-    2300000: fence:polySurface39
-    3300000: fence:polySurface39
-    4300000: fence:polySurface39
+    100000: Rubble:polySurfaceShape4HiddenFacesSet_defaultHideFaceDataSet_Rubble:Rubble:polySurface31
+    100002: Rubble:polySurfaceShape7HiddenFacesSet_defaultHideFaceDataSet_Rubble:Rubble:polySurface31
+    100004: Rubble:Rubble:polySurface31
+    100006: //RootNode
+    400000: Rubble:polySurfaceShape4HiddenFacesSet_defaultHideFaceDataSet_Rubble:Rubble:polySurface31
+    400002: Rubble:polySurfaceShape7HiddenFacesSet_defaultHideFaceDataSet_Rubble:Rubble:polySurface31
+    400004: Rubble:Rubble:polySurface31
+    400006: //RootNode
+    2100000: Rubble_polySurfaceShape4HiddenFacesSet_defaultHideFaceDataSet_Rubble_Rubble_polySurface31Mat
+    2100002: Rubble_polySurfaceShape7HiddenFacesSet_defaultHideFaceDataSet_Rubble_Rubble_polySurface31Mat
+    2100004: Rubble_Rubble_polySurface31Mat
+    2300000: Rubble:polySurfaceShape4HiddenFacesSet_defaultHideFaceDataSet_Rubble:Rubble:polySurface31
+    2300002: Rubble:polySurfaceShape7HiddenFacesSet_defaultHideFaceDataSet_Rubble:Rubble:polySurface31
+    2300004: Rubble:Rubble:polySurface31
+    3300000: Rubble:polySurfaceShape4HiddenFacesSet_defaultHideFaceDataSet_Rubble:Rubble:polySurface31
+    3300002: Rubble:polySurfaceShape7HiddenFacesSet_defaultHideFaceDataSet_Rubble:Rubble:polySurface31
+    3300004: Rubble:Rubble:polySurface31
+    4300000: Rubble:polySurfaceShape4HiddenFacesSet_defaultHideFaceDataSet_Rubble:Rubble:polySurface31
+    4300002: Rubble:polySurfaceShape7HiddenFacesSet_defaultHideFaceDataSet_Rubble:Rubble:polySurface31
+    4300004: Rubble:Rubble:polySurface31
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: fence_polySurface39Mat
-    second: {fileID: 2100000, guid: db1ef7ee252921d4eb8fa09fd3692662, type: 2}
+      name: Rubble_Rubble_polySurface31Mat
+    second: {fileID: 2100000, guid: 10ed9e81bc88c244892fa2ee7ac5f6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rubble_polySurfaceShape4HiddenFacesSet_defaultHideFaceDataSet_Rubble_Rubble_polySurface31Mat
+    second: {fileID: 2100000, guid: 10ed9e81bc88c244892fa2ee7ac5f6ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rubble_polySurfaceShape7HiddenFacesSet_defaultHideFaceDataSet_Rubble_Rubble_polySurface31Mat
+    second: {fileID: 2100000, guid: 10ed9e81bc88c244892fa2ee7ac5f6ce, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

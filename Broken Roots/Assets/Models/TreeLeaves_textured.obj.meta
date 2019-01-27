@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: ab486f55a8fbe734a9e6f056322082a0
+guid: c48375513e44b4145b034f0ab1dc9431
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: fence:polySurface39
-    400000: //RootNode
-    400002: fence:polySurface39
-    2100000: fence_polySurface39Mat
-    2300000: fence:polySurface39
-    3300000: fence:polySurface39
-    4300000: fence:polySurface39
+    100000: TreeLeaves:pSphere6
+    100002: //RootNode
+    400000: TreeLeaves:pSphere6
+    400002: //RootNode
+    2100000: TreeLeaves_pSphere6Mat
+    2300000: TreeLeaves:pSphere6
+    3300000: TreeLeaves:pSphere6
+    4300000: TreeLeaves:pSphere6
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: fence_polySurface39Mat
-    second: {fileID: 2100000, guid: db1ef7ee252921d4eb8fa09fd3692662, type: 2}
+      name: TreeLeaves_pSphere6Mat
+    second: {fileID: 2100000, guid: 54c42906cf71b6c4eb0264a4f1e5642a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

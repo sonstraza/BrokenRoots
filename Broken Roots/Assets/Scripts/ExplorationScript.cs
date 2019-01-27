@@ -88,8 +88,7 @@ public class ExplorationScript : MonoBehaviour
         else if (collision.gameObject.name == "RightExplore")
         {
             currentTileTrans = collision.transform.parent.parent;
-
-
+            
             //add at 1 tile away
             MakeEnvironmentTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z));
             //tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z + 0));

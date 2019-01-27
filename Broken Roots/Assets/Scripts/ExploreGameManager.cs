@@ -13,7 +13,7 @@ public class ExploreGameManager : MonoBehaviour
     //public GameObject[] FogTileArray;
     public GameObject[] ExplorationTileArray;
     public GameObject[] npcArray;
-    public static List<GameObject>[] npcFound;
+    //public static List<GameObject>[] npcFound;
     public static GameObject[] keyItemArray;
 
     [Header("Assigned Scripts")]

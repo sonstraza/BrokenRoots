@@ -24,11 +24,7 @@ public class ExplorationScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-        OnDrawGizmos();
-=======
-
->>>>>>> master
+        //OnDrawGizmos();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -108,13 +104,13 @@ public class ExplorationScript : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
     void OnDrawGizmos()
     {
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(currentTileTrans.transform.position, 10);
-=======
+    }
+
     void MakeEnvironmentTile(GameObject tileToSpawn, Vector3 newTileLocation)
     {
         Vector3 offset = new Vector3(0, -10, 0);
@@ -134,6 +130,5 @@ public class ExplorationScript : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         objectToMove.transform.position = end;
->>>>>>> master
     }
 }

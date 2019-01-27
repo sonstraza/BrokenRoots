@@ -12,6 +12,8 @@ public class EnvironmentTileScript : MonoBehaviour
     ExploreGameManager _exploreGameManager;
     GameObject[] npcArr;
 
+    System.Random rand = new System.Random();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +21,10 @@ public class EnvironmentTileScript : MonoBehaviour
         npcArr = _exploreGameManager.npcArray;
 
 
-        System.Random number = new System.Random();
-        int spawnResult = number.Next(1, 100);
+        int spawnResult = rand.Next(1, 100);
         if(spawnResult >= progressionItemChance && !hasNPCSpawned)
         {
-            int choiceResult = number.Next(0, 10000);
+            int choiceResult = rand.Next(0, 10000);
             if(choiceResult >= npcSpawnChance)
             {
                 //GameObject.Instantiate(choiceOfNPC(), spawnLocation.transform);
@@ -50,7 +51,6 @@ public class EnvironmentTileScript : MonoBehaviour
 
     GameObject choiceOfNPC()
     {
-        System.Random rand = new System.Random();
         int npcElement = rand.Next(0, npcArr.Length - 1);
         if(Data.npcsInTown.Contains(npcArr[npcElement].name) || ExploreGameManager.npcFound.Contains(npcArr[npcElement].name))
         {

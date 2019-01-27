@@ -5,7 +5,11 @@ using UnityEngine;
 public class EnvironmentTileScript : MonoBehaviour
 {
     public float progressionItemChance = 50f;
+<<<<<<< HEAD
     public float npcSpawnChance = 999f;
+=======
+    public float npcSpawnChance = 50f;
+>>>>>>> parent of 8d5b6ac... Merge branch 'Alex-Working-2'
     public GameObject spawnLocation;
 
     ExploreGameManager _exploreGameManager;
@@ -22,7 +26,7 @@ public class EnvironmentTileScript : MonoBehaviour
         int spawnResult = number.Next(1, 100);
         if(spawnResult >= progressionItemChance)
         {
-            int choiceResult = number.Next(0, 1000);
+            int choiceResult = number.Next(0, 100);
             if(choiceResult >= npcSpawnChance)
             {
                 GameObject.Instantiate(choiceOfNPC(), spawnLocation.transform);

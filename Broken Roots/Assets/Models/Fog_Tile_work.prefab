@@ -57,8 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
-    type: 3}
+  fogObject: {fileID: 0}
 --- !u!1 &657921646
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,8 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
-    type: 3}
+  fogObject: {fileID: 0}
 --- !u!1 &1453090173
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,8 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
-    type: 3}
+  fogObject: {fileID: 0}
 --- !u!1 &1862646342
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,8 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
-    type: 3}
+  fogObject: {fileID: 0}
 --- !u!114 &1001271402
 MonoBehaviour:
   m_ObjectHideFlags: 0

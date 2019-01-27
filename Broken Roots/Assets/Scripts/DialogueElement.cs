@@ -5,13 +5,27 @@ using UnityEngine;
 public class DialogueElement: MonoBehaviour
 {
     public enum Characters { Farmer, Doctor, Botanist, Merchant };
+
     public enum AvatarPos { left, right };
     public Characters Character;
     public AvatarPos CharacterPosition;
-    public Texture2D CharacterPic;
-    public string DialogueText;
-    public GUIStyle DialogueTextStyle;
-    public float TextPlayBackSpeed;
-    public AudioClip PlayBackSoundFile;
+    public Sprite CharacterPic;
 
+    public bool introducedToPlayer = false;
+    public bool keyItem1DialoguePlayed = false;
+
+    [TextArea(3, 10)]
+    public string[] IntroText;
+    [TextArea(3, 10)]
+    public string[] KeyItem1Text;
+    [TextArea(3, 10)]
+    public string[] KeyItem2Text;
+    [TextArea(3, 10)]
+    public string[] KeyItem3Text;
+    [TextArea(3, 10)]
+    public string[] GeneralText;
+
+    public AudioClip PlayBackSoundFile1;
+    public AudioClip PlayBackSoundFile2;
+    public AudioClip PlayBackSoundFile3;
 }

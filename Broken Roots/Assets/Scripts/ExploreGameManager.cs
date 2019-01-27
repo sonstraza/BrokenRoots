@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class ExploreGameManager : MonoBehaviour
 {
+    [Header("Show in Inspector")]
     public static ExploreGameManager instance = null;
+    public static Transform currentTile;
+
+    [Header("Arrays for random spawning")]
     public GameObject[] FogTileArray;
     public GameObject[] ExplorationTileArray;
 
@@ -28,10 +32,10 @@ public class ExploreGameManager : MonoBehaviour
         }
 
     }
-        // Start is called before the first frame update
-        void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        
+        currentTile = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame

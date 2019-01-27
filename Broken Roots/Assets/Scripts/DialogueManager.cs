@@ -139,7 +139,9 @@ public class DialogueManager : MonoBehaviour
 
                 if (!Data.npcsInTown.Contains(dialogueElement.CharacterPrefab))
                 {
+                    //Data.npcsInTown.Add(dialogueElement.CharacterPrefab);
                     Data.npcsInTown.Add(dialogueElement.CharacterPrefab);
+                    //Resources.Load(this.gameObject.name);
                 }
             }
             

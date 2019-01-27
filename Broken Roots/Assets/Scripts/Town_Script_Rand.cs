@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Town_Script_Rand : MonoBehaviour
 {
-    public GameObject[] objectsToSpawn;
+    public List<GameObject> objectsToSpawn;
     public float spawnRadius = 10.0f;
     public float distanceApart = 2;
     public int loopCap = 10000;
@@ -12,10 +12,12 @@ public class Town_Script_Rand : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Load NPCs from Data
-        objectsToSpawn = Data.npcsInTown.ToArray();
+        foreach (string name in Data.npcsInTown)
+        {
+            objectsToSpawn.Add((GameObject)Resources.Load("Prefabs/" + name));
+        }
 
-        int numObj = objectsToSpawn.Length;
+        int numObj = objectsToSpawn.Count;
         //make places for all possible NPC's to go
         //foreach found npc, place them into thier respective slots
         //requires that the gameobjects being spawned are tagged as "NPC"

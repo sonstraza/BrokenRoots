@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afbd7e8b07ff2d4c8a39fda7afab321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterPrefab: {fileID: 0}
+  CharacterPrefab: Farmer_GRP
   Character: 0
   CharacterPosition: 0
   CharacterPic: {fileID: 21300000, guid: 115e9aadecf837546b29acea545cc61c, type: 3}

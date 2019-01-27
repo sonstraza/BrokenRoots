@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnvironmentTileScript : MonoBehaviour
 {
     public float progressionItemChance = 50f;
-    public float npcSpawnChance = 900f;
+    public float npcSpawnChance = 999f;
     public GameObject spawnLocation;
 
     ExploreGameManager _exploreGameManager;

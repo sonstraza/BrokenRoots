@@ -8,9 +8,16 @@ public class EnvironmentTileScript : MonoBehaviour
     public float npcSpawnChance = 50f;
     public GameObject spawnLocation;
 
+    ExploreGameManager _exploreGameManager;
+    GameObject[] npcArr;
+
     // Start is called before the first frame update
     void Start()
     {
+        _exploreGameManager = GameObject.Find("ExplorationGameState").GetComponent<ExploreGameManager>();
+        npcArr = _exploreGameManager.npcArray;
+
+
         System.Random number = new System.Random();
         int spawnResult = number.Next(1, 100);
         if(spawnResult >= progressionItemChance)
@@ -34,8 +41,8 @@ public class EnvironmentTileScript : MonoBehaviour
     GameObject choiceOfNPC()
     {
         System.Random rand = new System.Random();
-        int npcElement = rand.Next(0, ExploreGameManager.npcArray.Length - 1);
-        GameObject choice = ExploreGameManager.npcArray[npcElement];
+        int npcElement = rand.Next(0, npcArr.Length - 1);
+        GameObject choice = npcArr[npcElement];
         return choice;
     }
 }

@@ -37,9 +37,9 @@ public class ExplorationScript : MonoBehaviour
         if (collision.gameObject.name == "UpwardExplore")
         {
             currentTileTrans = collision.transform.parent.parent;
-            MakeEnvironmentTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z));
             //add at 1 tile away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z + 100));
+            MakeEnvironmentTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z));
+            //tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z + 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z + 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 200, 0, currentTileTrans.position.z + 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z + 100));
@@ -55,9 +55,9 @@ public class ExplorationScript : MonoBehaviour
         else if (collision.gameObject.name == "DownwardExplore")
         {
             currentTileTrans = collision.transform.parent.parent;
-            MakeEnvironmentTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z));
             //add at 1 tile away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z - 100));
+            MakeEnvironmentTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z));
+            //tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z - 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z - 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 200, 0, currentTileTrans.position.z - 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z - 100));
@@ -73,9 +73,9 @@ public class ExplorationScript : MonoBehaviour
         else if (collision.gameObject.name == "LeftExplore")
         {
             currentTileTrans = collision.transform.parent.parent;
-            MakeEnvironmentTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z));
             //add at 1 tile away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z + 0));
+            MakeEnvironmentTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z));
+            //tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z + 0));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z - 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z - 200));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z + 100));
@@ -92,10 +92,10 @@ public class ExplorationScript : MonoBehaviour
         {
             currentTileTrans = collision.transform.parent.parent;
 
-            MakeEnvironmentTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z));
-            
+
             //add at 1 tile away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z + 0));
+            MakeEnvironmentTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z));
+            //tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z + 0));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z - 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z - 200));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z + 100));
@@ -135,9 +135,9 @@ public class ExplorationScript : MonoBehaviour
 
     void MakeEnvironmentTile(GameObject tileToSpawn, Vector3 newTileLocation)
     {
-        Vector3 offset = new Vector3(0, -10, 0);
-        GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation + offset, Quaternion.identity);
-        StartCoroutine(MoveOverSeconds(gameObject, newTileLocation, 5f));
+        Vector3 offset = new Vector3(0, -20, 0);
+        GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation, Quaternion.identity);
+        //StartCoroutine(MoveOverSeconds(gameObject, newTileLocation, 0.5f));
     }
 
     public IEnumerator MoveOverSeconds(GameObject objectToMove, Vector3 end, float seconds)

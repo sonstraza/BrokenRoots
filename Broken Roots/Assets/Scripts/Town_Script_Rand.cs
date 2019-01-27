@@ -13,7 +13,7 @@ public class Town_Script_Rand : MonoBehaviour
     void Start()
     {
         // Load NPCs from Data
-        //objectsToSpawn = Data.npcsInTown.ToArray();
+        objectsToSpawn = Data.npcsInTown.ToArray();
 
         int numObj = objectsToSpawn.Length;
         //make places for all possible NPC's to go

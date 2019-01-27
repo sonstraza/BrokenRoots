@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnvironmentTileScript : MonoBehaviour
 {
     public float progressionItemChance = 50f;
-    public float npcSpawnChance = 9999f;
+    public float npcSpawnChance = 999f;
     public GameObject spawnLocation;
     public bool hasNPCSpawned = false;
 
@@ -23,7 +23,7 @@ public class EnvironmentTileScript : MonoBehaviour
         int spawnResult = number.Next(1, 100);
         if(spawnResult >= progressionItemChance && !hasNPCSpawned)
         {
-            int choiceResult = number.Next(0, 10000);
+            int choiceResult = number.Next(0, 1000);
             if(choiceResult >= npcSpawnChance)
             {
                 //GameObject.Instantiate(choiceOfNPC(), spawnLocation.transform);

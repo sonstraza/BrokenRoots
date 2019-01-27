@@ -12,6 +12,9 @@ public class Town_Script_Rand : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Load NPCs from Data
+        //objectsToSpawn = Data.npcsInTown.ToArray();
+
         int numObj = objectsToSpawn.Length;
         //make places for all possible NPC's to go
         //foreach found npc, place them into thier respective slots
@@ -29,6 +32,7 @@ public class Town_Script_Rand : MonoBehaviour
                 if (hit.collider.tag != "NPC")
                 {
                     Vector3 finalSpawnPos = hit.point;
+                    finalSpawnPos.y += objectToSpawn.GetComponentInChildren<SpriteRenderer>().bounds.size.y / 2f;
 
                     Instantiate(objectToSpawn, finalSpawnPos, Quaternion.identity);
                 }

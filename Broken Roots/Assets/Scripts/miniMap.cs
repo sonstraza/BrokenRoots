@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class miniMap : MonoBehaviour
 {
-    bool miniMapOn = false;
     GameObject miniMapCam;
     // Start is called before the first frame update
     void Start()
@@ -17,16 +16,12 @@ public class miniMap : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            miniMapOn = !miniMapOn;
-
-            if (!miniMapOn)
+           if(miniMapCam.activeInHierarchy == false)
             {
-                Debug.Log("Open MiniMap");
                 miniMapCam.SetActive(true);
             }
             else
             {
-                Debug.Log("Close MiniMap");
                 miniMapCam.SetActive(false);
             }
         }

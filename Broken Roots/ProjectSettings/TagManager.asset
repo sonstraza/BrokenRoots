@@ -7,6 +7,7 @@ TagManager:
   - environment
   - fog
   - NPC
+  - Edge
   layers:
   - Default
   - TransparentFX

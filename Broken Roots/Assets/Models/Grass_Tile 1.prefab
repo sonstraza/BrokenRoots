@@ -32,7 +32,7 @@ Transform:
   - {fileID: 8470803530156544259}
   - {fileID: 1592347195314547152}
   m_Father: {fileID: 6170925014263870733}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2066216746159558685
 GameObject:
@@ -149,6 +149,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fogObject: {fileID: 0}
+--- !u!1 &3034265641360290897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270036350997515958}
+  m_Layer: 0
+  m_Name: SpawnLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1270036350997515958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034265641360290897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6170925014263870733}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6758626751437745402
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,9 +308,10 @@ GameObject:
   - component: {fileID: 6716705137780374602}
   - component: {fileID: 7176320735693954908}
   - component: {fileID: 3694122657065529140}
+  - component: {fileID: 7150239016806868219}
   m_Layer: 0
   m_Name: Grass_Tile 1
-  m_TagString: Untagged
+  m_TagString: environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,6 +328,7 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children:
   - {fileID: 3985411179743321040}
+  - {fileID: 1270036350997515958}
   - {fileID: 4617329855985924990}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -376,7 +408,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressionItemChance: 50
   npcSpawnChance: 50
-  spawnLocation: {fileID: 0}
+  spawnLocation: {fileID: 3034265641360290897}
+--- !u!114 &7150239016806868219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9093758593391362731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
+    type: 3}
 --- !u!1 &9129965951574962394
 GameObject:
   m_ObjectHideFlags: 0

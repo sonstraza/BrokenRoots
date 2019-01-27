@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - environment
+  - fog
   - NPC
   - Edge
   layers:
@@ -15,8 +17,8 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - CollidableObject
+  - 
+  - 
   - 
   - 
   - 

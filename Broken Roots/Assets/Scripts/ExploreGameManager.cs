@@ -7,15 +7,17 @@ public class ExploreGameManager : MonoBehaviour
     [Header("Show in Inspector")]
     public static ExploreGameManager instance = null;
     public static Transform currentTile;
+    public GameObject miniMapCam;
 
     [Header("Arrays for random spawning")]
-    public GameObject[] FogTileArray;
+    //public GameObject[] FogTileArray;
     public GameObject[] ExplorationTileArray;
-    public static GameObject[] npcArray;
+    public GameObject[] npcArray;
+    public static List<GameObject>[] npcFound;
     public static GameObject[] keyItemArray;
 
-    [Header("Assigned Scripts")]
-    public SetCurrentTile _setCurrentTile;
+    //[Header("Assigned Scripts")]
+    //public SetCurrentTile _setCurrentTile;
 
     //Awake for singleton creation
     void Awake()
@@ -47,6 +49,6 @@ public class ExploreGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

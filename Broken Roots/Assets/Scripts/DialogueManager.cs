@@ -46,12 +46,22 @@ public class DialogueManager : MonoBehaviour
         if (!dialogueElement.introducedToPlayer)
         {
             dialogueTextArray = dialogueElement.IntroText;
-            dialogueElement.introducedToPlayer = true;          
+            dialogueElement.introducedToPlayer = true;
+            player.clip1 = dialogueElement.IntroSoundPlaybackStart;
+            player.clip2 = dialogueElement.IntroSoundPlaybackEnd;
         }
         else if (player.keyItems.ContainsKey(dialogueElement.Character) && dialogueElement.keyItem1DialoguePlayed)
         {
             dialogueTextArray = dialogueElement.KeyItem1Text;
             dialogueElement.keyItem1DialoguePlayed = true;
+            player.clip1 = dialogueElement.KeyItem1Playback;
+            player.clip2 = dialogueElement.KeyItem2Playback;
+        }
+        else
+        {
+            dialogueTextArray = dialogueElement.GeneralText;
+            player.clip1 = dialogueElement.IntroSoundPlaybackStart;
+            player.clip2 = dialogueElement.IntroSoundPlaybackEnd;
         }
         
 
@@ -90,7 +100,7 @@ public class DialogueManager : MonoBehaviour
             dialogueQueue.Enqueue(sentence);
         }
 
-        player.audioSource.clip = dialogueElement.IntroSoundPlaybackStart;
+        player.audioSource.clip = player.clip1;
         player.audioSource.Play();
 
         DisplayNextSentence();
@@ -100,7 +110,7 @@ public class DialogueManager : MonoBehaviour
 
         if(dialogueQueue.Count == 1)
         {
-            player.audioSource.clip = dialogueElement.IntroSoundPlaybackEnd;
+            player.audioSource.clip = player.clip2;
             player.audioSource.Play();
         }
         if (dialogueQueue.Count == 0)

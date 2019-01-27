@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -548,10 +548,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1315254323934297646, guid: 3eb3be7883a854542b5b51d2fddbdab4,
         type: 3}
+      propertyPath: GeneralText.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1315254323934297646, guid: 3eb3be7883a854542b5b51d2fddbdab4,
+        type: 3}
       propertyPath: CharacterPrefab
       value: 
-      objectReference: {fileID: 1315254323271602549, guid: 3eb3be7883a854542b5b51d2fddbdab4,
+      objectReference: {fileID: 0}
+    - target: {fileID: 1315254323934297646, guid: 3eb3be7883a854542b5b51d2fddbdab4,
         type: 3}
+      propertyPath: GeneralText.Array.data[0]
+      value: Hmm, I ought to write down my thoughts more than I do now...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1315254323934297646, guid: 3eb3be7883a854542b5b51d2fddbdab4,
+        type: 3}
+      propertyPath: GeneralText.Array.data[1]
+      value: "Evesdropping?! I don\u2019t have time to worry about you, so leave."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eb3be7883a854542b5b51d2fddbdab4, type: 3}
 --- !u!114 &3186378027666073559 stripped
@@ -647,10 +661,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3806891875655704579, guid: c939e7d11708fef45bfbb4f028fe7b7e,
         type: 3}
+      propertyPath: GeneralText.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806891875655704579, guid: c939e7d11708fef45bfbb4f028fe7b7e,
+        type: 3}
       propertyPath: CharacterPrefab
       value: 
-      objectReference: {fileID: 3806891875114203863, guid: c939e7d11708fef45bfbb4f028fe7b7e,
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806891875655704579, guid: c939e7d11708fef45bfbb4f028fe7b7e,
         type: 3}
+      propertyPath: GeneralText.Array.data[0]
+      value: What kinds of things do you like to eat? I might be inclined to try and
+        grow some myself!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806891875655704579, guid: c939e7d11708fef45bfbb4f028fe7b7e,
+        type: 3}
+      propertyPath: GeneralText.Array.data[1]
+      value: Just kidding! I can't do anything without the proper tools.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c939e7d11708fef45bfbb4f028fe7b7e, type: 3}
 --- !u!114 &6108988940442080553 stripped
@@ -734,9 +763,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7055978208665158498, guid: 5ab957273b7e5e843b421bbe8c28cb62,
         type: 3}
+      propertyPath: GeneralText.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055978208665158498, guid: 5ab957273b7e5e843b421bbe8c28cb62,
+        type: 3}
       propertyPath: CharacterPrefab
       value: 
-      objectReference: {fileID: 7055978208178822057, guid: 5ab957273b7e5e843b421bbe8c28cb62,
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055978208665158498, guid: 5ab957273b7e5e843b421bbe8c28cb62,
         type: 3}
+      propertyPath: GeneralText.Array.data[1]
+      value: "No! I have uhh\u2026 plenty of things to do! Yeah, that's it. \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055978208665158498, guid: 5ab957273b7e5e843b421bbe8c28cb62,
+        type: 3}
+      propertyPath: GeneralText.Array.data[0]
+      value: I wish I could be more helpful around here...
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ab957273b7e5e843b421bbe8c28cb62, type: 3}

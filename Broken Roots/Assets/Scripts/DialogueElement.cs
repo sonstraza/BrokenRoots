@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogueElement: MonoBehaviour
 {
     public enum Characters { Farmer, Doctor, Botanist, Merchant };
+    public GameObject CharacterPrefab;
 
     public enum AvatarPos { left, right };
     public Characters Character;
@@ -25,7 +26,9 @@ public class DialogueElement: MonoBehaviour
     [TextArea(3, 10)]
     public string[] GeneralText;
 
-    public AudioClip PlayBackSoundFile1;
-    public AudioClip PlayBackSoundFile2;
-    public AudioClip PlayBackSoundFile3;
+    public AudioClip IntroSoundPlaybackStart;
+    public AudioClip IntroSoundPlaybackEnd;
+    public AudioClip KeyItem1Playback;
+    public AudioClip KeyItem2Playback;
+    
 }

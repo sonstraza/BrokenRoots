@@ -136,9 +136,14 @@ public class DialogueManager : MonoBehaviour
                 {
                     DisplayNextSentence();
                 }
-            }
 
+                if (!Data.npcsInTown.Contains(dialogueElement.CharacterPrefab))
+                {
+                    Data.npcsInTown.Add(dialogueElement.CharacterPrefab);
+                }
+            }
             
+
 
         }
 

@@ -6,12 +6,13 @@ public class Town_Grid : MonoBehaviour
 {
     public int divisions;//must be odd
     public GameObject GridItem;
-    public List<GameObject> dummy;
+    public List<GameObject> AllpossibleTiles;
     static List<GameObject> npcList;//Data.npcsInTown;
     
     void Start()
     {
-        npcList = dummy;
+        npcList = AllpossibleTiles;
+        //npcList = Data.NPCNames;//doesn't work...
         Vector3 size = GridItem.GetComponent<Renderer>().bounds.size;
         Transform Center = GridItem.gameObject.transform;
         Vector3 botLeftCorner = Vector3.zero;

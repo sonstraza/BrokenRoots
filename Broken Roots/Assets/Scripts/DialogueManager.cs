@@ -40,6 +40,17 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.enabled = true;
         sprite.enabled = true;
 
+        if (!dialogueElement.introducedToPlayer)
+        {
+            dialogueTextArray = dialogueElement.IntroText;
+            dialogueElement.introducedToPlayer = true;          
+        }
+        else if (player.keyItems[dialogueElement.Character] && dialogueElement.keyItem1DialoguePlayed)
+        {
+            dialogueTextArray = dialogueElement.KeyItem1Text;
+            dialogueElement.keyItem1DialoguePlayed = true;
+        }
+        
 
         /*
         //Botanist key item dialogue
@@ -63,8 +74,8 @@ public class DialogueManager : MonoBehaviour
 
 
 
-        // If Intro
-        dialogueTextArray = dialogueElement.IntroText;
+        
+        
         // If KeyItem1 for Farmer || Doctor || Botonist has beenObtained
         //dialogueTextArray = dialogueElement.KeyItem1Text;
 
@@ -76,6 +87,9 @@ public class DialogueManager : MonoBehaviour
             dialogueQueue.Enqueue(sentence);
         }
 
+        player.audioSource.clip = dialogueElement.IntroSoundPlaybackStart;
+        player.audioSource.Play();
+
         DisplayNextSentence();
     }
     private void DisplayNextSentence()
@@ -83,7 +97,7 @@ public class DialogueManager : MonoBehaviour
 
         if(dialogueQueue.Count == 1)
         {
-            player.audioSource.clip = dialogueElement.IntroSoundPlayback;
+            player.audioSource.clip = dialogueElement.IntroSoundPlaybackEnd;
             player.audioSource.Play();
         }
         if (dialogueQueue.Count == 0)
@@ -123,6 +137,8 @@ public class DialogueManager : MonoBehaviour
                     DisplayNextSentence();
                 }
             }
+
+            
 
         }
 

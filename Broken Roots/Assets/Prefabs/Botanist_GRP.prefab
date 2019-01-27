@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afbd7e8b07ff2d4c8a39fda7afab321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CharacterPrefab: {fileID: 0}
   Character: 0
   CharacterPosition: 0
   CharacterPic: {fileID: 21300000, guid: afe384e27f991194a8e749f203cbdebf, type: 3}
@@ -371,13 +372,22 @@ MonoBehaviour:
     life.
   - Talking to you is somehow mildly refreshing. Maybe following you will help me
     gain it back. Show me the way.
-  KeyItem1Text: []
+  KeyItem1Text:
+  - "What? I told you I can\u2019t do anything without... wait what\u2019s that? Wait
+    what is that! I\u2019ll join you if you give me that seed!"
+  - ' Thank you so much! Now excuse me as I cultivate some new specimens, you''re
+    more useful than you appear to be.'
+  - Thank you again! I can hasten the process if I had some fertilizer. Keep your
+    eye out if you see something like that for me will you?
   KeyItem2Text: []
   KeyItem3Text: []
   GeneralText: []
-  IntroSoundPlayback: {fileID: 8300000, guid: 9d5170ae11913f045b59da24cc576978, type: 3}
-  KeyItem1Playback: {fileID: 0}
-  KeyItem2Playback: {fileID: 0}
+  IntroSoundPlaybackStart: {fileID: 8300000, guid: a89db9ac9aee97e4aa16d5fcba2dba3f,
+    type: 3}
+  IntroSoundPlaybackEnd: {fileID: 8300000, guid: 9d5170ae11913f045b59da24cc576978,
+    type: 3}
+  KeyItem1Playback: {fileID: 8300000, guid: a89db9ac9aee97e4aa16d5fcba2dba3f, type: 3}
+  KeyItem2Playback: {fileID: 8300000, guid: 4d462c14106044644a7a165f834e1771, type: 3}
 --- !u!114 &7055978208665158499
 MonoBehaviour:
   m_ObjectHideFlags: 0

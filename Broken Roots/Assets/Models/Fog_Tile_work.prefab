@@ -57,6 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 0}
 --- !u!1 &657921646
 GameObject:
@@ -206,6 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 0}
 --- !u!1 &1453090173
 GameObject:
@@ -264,6 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 0}
 --- !u!1 &1862646342
 GameObject:
@@ -322,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 0}
 --- !u!114 &1001271402
 MonoBehaviour:
@@ -406,6 +410,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 983a493a5a9dd2f4d8cfe10fabcb5612, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
 --- !u!1 &9032132174108397162 stripped

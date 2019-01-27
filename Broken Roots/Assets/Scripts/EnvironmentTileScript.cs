@@ -5,8 +5,9 @@ using UnityEngine;
 public class EnvironmentTileScript : MonoBehaviour
 {
     public float progressionItemChance = 50f;
-    public float npcSpawnChance = 999f;
+    public float npcSpawnChance = 9999f;
     public GameObject spawnLocation;
+    public bool hasNPCSpawned = false;
 
     ExploreGameManager _exploreGameManager;
     GameObject[] npcArr;
@@ -20,12 +21,16 @@ public class EnvironmentTileScript : MonoBehaviour
 
         System.Random number = new System.Random();
         int spawnResult = number.Next(1, 100);
-        if(spawnResult >= progressionItemChance)
+        if(spawnResult >= progressionItemChance && !hasNPCSpawned)
         {
-            int choiceResult = number.Next(0, 1000);
+            int choiceResult = number.Next(0, 10000);
             if(choiceResult >= npcSpawnChance)
             {
-                GameObject.Instantiate(choiceOfNPC(), spawnLocation.transform);
+                //GameObject.Instantiate(choiceOfNPC(), spawnLocation.transform);
+
+                Vector3 spawnOffset = new Vector3(0, 2f, 0);
+                GameObject newNPC = Instantiate(choiceOfNPC(), spawnLocation.transform.position + spawnOffset, Quaternion.identity);
+                newNPC.transform.localScale = new Vector3(3, 3, 3);
             }
         }
         

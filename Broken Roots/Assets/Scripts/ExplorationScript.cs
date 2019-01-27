@@ -41,8 +41,11 @@ public class ExplorationScript : MonoBehaviour
         {
             currentTileTrans = collision.transform.parent.parent;
             //add at 1 tile away
-            //MakeEnvironmentTile(enviroTile, new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z + 100));
-            tryToMakeTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z + 100));
+            if (currentTileTrans.tag == "fog")
+            {
+                MakeEnvironmentTile(enviroTile, new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z + 100));
+            }
+            //tryToMakeTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z + 100));
             Debug.Log("Make Enviro1");
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z + 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 200, 0, currentTileTrans.position.z + 100));
@@ -60,8 +63,11 @@ public class ExplorationScript : MonoBehaviour
         {
             currentTileTrans = collision.transform.parent.parent;
             //add at 1 tile away
-            //MakeEnvironmentTile(enviroTile, new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z - 100));
-            tryToMakeTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z - 100));
+            if (currentTileTrans.tag == "fog")
+            {
+                MakeEnvironmentTile(enviroTile, new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z - 100));
+            }
+            //tryToMakeTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x, 0, currentTileTrans.position.z - 100));
             Debug.Log("Make Enviro2");
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z - 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 200, 0, currentTileTrans.position.z - 100));
@@ -79,8 +85,11 @@ public class ExplorationScript : MonoBehaviour
         {
             currentTileTrans = collision.transform.parent.parent;
             //add at 1 tile away
-            //MakeEnvironmentTile(enviroTile, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z));
-            tryToMakeTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z));
+            if (currentTileTrans.tag == "fog")
+            {
+                MakeEnvironmentTile(enviroTile, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z));
+            }
+            //tryToMakeTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z));
             Debug.Log("Make Enviro3");
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z - 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z - 200));
@@ -97,10 +106,13 @@ public class ExplorationScript : MonoBehaviour
         else if (collision.gameObject.name == "RightExplore")
         {
             currentTileTrans = collision.transform.parent.parent;
-            
+
             //add at 1 tile away
-            //MakeEnvironmentTile(enviroTile, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z));
-            tryToMakeTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z + 0));
+            if (currentTileTrans.tag == "fog")
+            {
+                MakeEnvironmentTile(enviroTile, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z));
+            }
+            //tryToMakeTile(choiceOfEnviroTile(), new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z + 0));
             Debug.Log("Make Enviro4");
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z - 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z - 200));

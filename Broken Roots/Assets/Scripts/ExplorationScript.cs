@@ -31,6 +31,7 @@ public class ExplorationScript : MonoBehaviour
     {
         if (collision.gameObject.name == "UpwardExplore")
         {
+            ExploreGameManager.currentTile = collision.transform.parent.parent;
             //add at 1 tile away
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.z + 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + 100));
@@ -43,10 +44,11 @@ public class ExplorationScript : MonoBehaviour
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + 200));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + 200));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + 200));
-            Debug.Log("UpwardExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
+            //Debug.Log("UpwardExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
         }
         else if (collision.gameObject.name == "DownwardExplore")
         {
+            ExploreGameManager.currentTile = collision.transform.parent.parent;
             //add at 1 tile away
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.z + -100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + -100));
@@ -59,10 +61,11 @@ public class ExplorationScript : MonoBehaviour
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + -200));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + -200));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + -200));
-            Debug.Log("DownExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
+            //Debug.Log("DownExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
         }
         else if (collision.gameObject.name == "LeftExplore")
         {
+            ExploreGameManager.currentTile = collision.transform.parent.parent;
             //add at 1 tile away
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + 0));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + -100));
@@ -75,10 +78,11 @@ public class ExplorationScript : MonoBehaviour
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + -200));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + 200));
-            Debug.Log("LeftExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
+            //Debug.Log("LeftExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
         }
         else if (collision.gameObject.name == "RightExplore")
         {
+            ExploreGameManager.currentTile = collision.transform.parent.parent;
             //add at 1 tile away
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.z + 0));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + -100));
@@ -92,7 +96,7 @@ public class ExplorationScript : MonoBehaviour
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + -200));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + 200));
-            Debug.Log("RightExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
+            //Debug.Log("RightExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
         }
     }
 
@@ -123,7 +127,6 @@ public class ExplorationScript : MonoBehaviour
         Vector3 offset = new Vector3(0, -10, 0);
         GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation + offset, Quaternion.identity);
         StartCoroutine(MoveOverSeconds(gameObject, newTileLocation, 5f));
-
     }
 
     public IEnumerator MoveOverSeconds(GameObject objectToMove, Vector3 end, float seconds)

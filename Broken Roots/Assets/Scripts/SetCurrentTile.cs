@@ -18,9 +18,9 @@ public class SetCurrentTile : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player")
+        //if (collision.gameObject.tag == "Player")
         {
-            ExploreGameManager.currentTile = this.transform.parent.parent;
+            //ExploreGameManager.currentTile = this.transform.parent.parent;
         }
     }
 }

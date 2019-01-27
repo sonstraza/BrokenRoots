@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 6971213241563235812}
   - component: {fileID: 6716705137780374602}
   - component: {fileID: 7176320735693954908}
+  - component: {fileID: 3694122657065529140}
   m_Layer: 0
   m_Name: Grass_Tile 1
   m_TagString: Untagged
@@ -359,7 +360,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBeenCollider: {fileID: 0}
   playerObject: {fileID: 0}
+  destroyDistance: 20
   currentDistanceToPlayer: 0
+--- !u!114 &3694122657065529140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9093758593391362731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc5f589feabc39c4f881c82270c08427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressionItemChance: 50
+  npcSpawnChance: 50
+  spawnLocation: {fileID: 0}
 --- !u!1 &9129965951574962394
 GameObject:
   m_ObjectHideFlags: 0

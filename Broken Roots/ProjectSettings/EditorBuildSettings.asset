@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Engineer/Alex.unity
     guid: 2a9efba5b23981848bc373d0f892914d
+  - enabled: 1
+    path: Assets/Scenes/Engineer/Menu.unity
+    guid: cb1416d2ec4e52d4c9881ed274334302
   m_configObjects: {}

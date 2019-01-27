@@ -16,37 +16,44 @@ public class CharacterData
     public List<string> itemNames;
     //Amount of gold.
     public int gold;
+
+    public CharacterData()
+    {
+        NPCNames = new List<string>();
+        itemNames = new List<string>();
+        gold = 0;
+    }
 }
 
-public class Data
+public static class Data
 {
     //Send in from game
-    public List<GameObject> npcsInTown;
+    public static List<GameObject> npcsInTown = new List<GameObject>();
     //Send in from game
-    public List<GameObject> keyItem;
-    public CharacterData charaData;
+    public static List<GameObject> keyItem = new List<GameObject>();
+    public static CharacterData charaData = new CharacterData();
 
     //Set in Unity
-    public Button saveButton;
-    public Button loadButton;
+    //public Button saveButton;
+   //public Button loadButton;
 
     const string folderName = "BinaryCharacterData";
     const string fileExtension = ".dat";
 
-    void Start()
-    {
-        npcsInTown = new List<GameObject>();
-        keyItem = new List<GameObject>();
+    //static void Start()
+    //{
+        //npcsInTown = new List<GameObject>();
+        //keyItem = new List<GameObject>();
         //Called when save button in UI is clicked
-        saveButton.onClick.AddListener(SaveGame);
+        //saveButton.onClick.AddListener(SaveGame);
         //Called when load button in UI is clicked
-        loadButton.onClick.AddListener(LoadGame);
-    }
+        //loadButton.onClick.AddListener(LoadGame);
+    //}
 
     /// <summary>
     /// Saves game
     /// </summary>
-    void SaveGame()
+    public static void SaveGame()
     {
         //Iterates through all NPCs storing only the name of the prefab as strings
         foreach (GameObject npc in npcsInTown)
@@ -68,7 +75,7 @@ public class Data
         string dataPath = Path.Combine(folderPath, pathString + fileExtension);
         BinaryFormatter binaryFormatter = new BinaryFormatter();
 
-        using (FileStream fileStream = File.Open(pathString, FileMode.OpenOrCreate))
+        using (FileStream fileStream = File.Open(dataPath, FileMode.OpenOrCreate))
         {
             binaryFormatter.Serialize(fileStream, charaData);
         }
@@ -77,7 +84,7 @@ public class Data
     /// <summary>
     /// Loads game
     /// </summary>
-    void LoadGame()
+    public static void LoadGame()
     {
         string[] filePaths = GetFilePaths();
 
@@ -90,6 +97,12 @@ public class Data
                 charaData = (CharacterData) binaryFormatter.Deserialize(fileStream);
             }
         }
+
+        foreach (string npcName in charaData.NPCNames)
+        {
+            npcsInTown.Add((GameObject)Resources.Load(npcName));
+        }
+        // TODO: Load item prefabs, load gold
     }
 
     /// <summary>
@@ -100,6 +113,6 @@ public class Data
     {
         string folderPath = Path.Combine(Application.persistentDataPath, folderName);
 
-        return Directory.GetFiles(folderPath, fileExtension);
+        return Directory.GetFiles(folderPath);
     }
 }

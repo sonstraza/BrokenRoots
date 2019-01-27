@@ -33,12 +33,11 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("Town");
     }
 
-    public void LoadMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
-
     public void SaveGame()
+    {
+        //fill in
+    }
+    public void LoadGame()
     {
         //fill in
     }
@@ -111,3 +110,9 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 }
+    public void SaveGame()
+    {
+        Data.SaveGame();
+    public void LoadGame()
+    {
+        Data.LoadGame();

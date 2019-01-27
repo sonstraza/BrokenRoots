@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.95686275}
+  m_Color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 0.7137255}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -883,17 +883,17 @@ RectTransform:
   m_GameObject: {fileID: 264492548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.90815, y: 0.77342594, z: 0.90815}
   m_Children:
   - {fileID: 980084887}
   - {fileID: 1398496211}
   m_Father: {fileID: 1046286814}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -262.7, y: 182.46999}
-  m_SizeDelta: {x: -660.96, y: -380.72}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 126, y: -46}
+  m_SizeDelta: {x: 241.34, y: 87.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264492550
 MonoBehaviour:
@@ -1072,6 +1072,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottom
       objectReference: {fileID: 0}
+    - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1298816674, guid: 99e8e77637c1230418c25af04fda34f4, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -1191,6 +1196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
     type: 3}
 --- !u!1 &377527015
@@ -1279,6 +1285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Top
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1298816674, guid: 99e8e77637c1230418c25af04fda34f4, type: 3}
       propertyPath: m_TagString
@@ -1399,6 +1410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
     type: 3}
 --- !u!1 &440604084
@@ -1574,10 +1586,10 @@ RectTransform:
   m_Father: {fileID: 1046286814}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -341.85, y: 182.47}
-  m_SizeDelta: {x: 51.31, y: 44.28}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 46.850006, y: -45.99997}
+  m_SizeDelta: {x: 51.309998, y: 44.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &450181527
 MonoBehaviour:
@@ -1803,7 +1815,6 @@ MonoBehaviour:
   - {fileID: 3806891875114203863, guid: c939e7d11708fef45bfbb4f028fe7b7e, type: 3}
   - {fileID: 1315254323271602549, guid: 3eb3be7883a854542b5b51d2fddbdab4, type: 3}
   - {fileID: 7055978208178822057, guid: 5ab957273b7e5e843b421bbe8c28cb62, type: 3}
-  _setCurrentTile: {fileID: 0}
 --- !u!1 &537968844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,6 +2541,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Top Left
       objectReference: {fileID: 0}
+    - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1298816674, guid: 99e8e77637c1230418c25af04fda34f4, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -2649,6 +2665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
     type: 3}
 --- !u!1 &823538024
@@ -3200,7 +3217,7 @@ RectTransform:
   m_GameObject: {fileID: 980228741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.62272, y: 0.62272, z: 0.62272}
   m_Children:
   - {fileID: 1331418648}
   - {fileID: 837097008}
@@ -3212,10 +3229,10 @@ RectTransform:
   m_Father: {fileID: 1046286814}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -341.84998, y: -5.700012}
-  m_SizeDelta: {x: -704.7, y: -100}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -114, y: 545}
+  m_SizeDelta: {x: 319.30005, y: 668}
   m_Pivot: {x: 0.5000002, y: 0.5}
 --- !u!114 &980228743
 MonoBehaviour:
@@ -3367,6 +3384,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Top Right
       objectReference: {fileID: 0}
+    - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1298816674, guid: 99e8e77637c1230418c25af04fda34f4, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -3486,6 +3508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
     type: 3}
 --- !u!1 &1076068165
@@ -3652,7 +3675,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1099319595}
   - component: {fileID: 1099319598}
-  - component: {fileID: 1099319597}
   - component: {fileID: 1099319596}
   m_Layer: 0
   m_Name: MiniMapCamera
@@ -3660,7 +3682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1099319595
 Transform:
   m_ObjectHideFlags: 0
@@ -3688,14 +3710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f539e3af9cb6592489a50965926fc74e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!81 &1099319597
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1099319594}
-  m_Enabled: 1
 --- !u!20 &1099319598
 Camera:
   m_ObjectHideFlags: 0
@@ -3878,6 +3892,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottom Left
       objectReference: {fileID: 0}
+    - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1298816674, guid: 99e8e77637c1230418c25af04fda34f4, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -3997,6 +4016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
     type: 3}
 --- !u!1 &1113287536
@@ -4799,7 +4819,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647528365}
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 20, z: -15}
+  m_LocalPosition: {x: 0, y: 12.4, z: -10.6}
   m_LocalScale: {x: 1, y: 1.1247185, z: 1.1247187}
   m_Children: []
   m_Father: {fileID: 1745631600}
@@ -4816,6 +4836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1298816674, guid: 99e8e77637c1230418c25af04fda34f4, type: 3}
       propertyPath: m_TagString
@@ -4936,6 +4961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
     type: 3}
 --- !u!1 &1649920737
@@ -5170,6 +5196,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right
       objectReference: {fileID: 0}
+    - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1298816674, guid: 99e8e77637c1230418c25af04fda34f4, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -5289,6 +5320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
     type: 3}
 --- !u!1 &1723108566
@@ -5657,7 +5689,7 @@ PrefabInstance:
     - target: {fileID: 4851055769617725274, guid: c8efd0b9d2489964dba01e011bb1c681,
         type: 3}
       propertyPath: speed
-      value: 0.6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7795297446598211525, guid: c8efd0b9d2489964dba01e011bb1c681,
         type: 3}
@@ -5669,6 +5701,12 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8925034625509616687, guid: c8efd0b9d2489964dba01e011bb1c681,
+        type: 3}
+      propertyPath: enviroTile
+      value: 
+      objectReference: {fileID: 9093758593391362731, guid: 51819bd5a82507c4e813fdeadb1565bc,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8efd0b9d2489964dba01e011bb1c681, type: 3}
 --- !u!4 &1745631600 stripped
@@ -5696,7 +5734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1758800212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6141,6 +6179,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottom Right
       objectReference: {fileID: 0}
+    - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1298816674, guid: 99e8e77637c1230418c25af04fda34f4, type: 3}
       propertyPath: m_TagString
       value: Untagged
@@ -6264,6 +6307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
     type: 3}
 --- !u!1 &2107683637

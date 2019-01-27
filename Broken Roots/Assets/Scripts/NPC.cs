@@ -23,7 +23,6 @@ public class NPC : MonoBehaviour
     private float reachDistance = .1f;
     
     private float canMoveCounter;
-    private bool canBeSpokenTo;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,11 +78,6 @@ public class NPC : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             canMove = false;
-            canBeSpokenTo = true;
-        }
-        else
-        {
-            canBeSpokenTo = false;
         }
     }
 }

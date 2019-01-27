@@ -48,7 +48,7 @@ public class DialogueManager : MonoBehaviour
             dialogueTextArray = dialogueElement.IntroText;
             dialogueElement.introducedToPlayer = true;          
         }
-        else if (player.keyItems[dialogueElement.Character] && dialogueElement.keyItem1DialoguePlayed)
+        else if (player.keyItems.ContainsKey(dialogueElement.Character) && dialogueElement.keyItem1DialoguePlayed)
         {
             dialogueTextArray = dialogueElement.KeyItem1Text;
             dialogueElement.keyItem1DialoguePlayed = true;

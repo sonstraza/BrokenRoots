@@ -28,6 +28,11 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    public void LoadTown()
+    {
+        SceneManager.LoadScene("Town");
+    }
+
     public void LoadMenu()
     {
         SceneManager.LoadScene("Menu");

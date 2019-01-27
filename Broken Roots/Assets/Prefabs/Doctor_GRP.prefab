@@ -289,19 +289,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afbd7e8b07ff2d4c8a39fda7afab321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CharacterPrefab: {fileID: 0}
   Character: 0
   CharacterPosition: 0
-  CharacterPic: {fileID: 0}
+  CharacterPic: {fileID: 21300000, guid: 0b2f97297196a0b4880e3ae6c1d50049, type: 3}
   introducedToPlayer: 0
   keyItem1DialoguePlayed: 0
-  IntroText: []
-  KeyItem1Text: []
+  IntroText:
+  - "Oh, it\u2019s you... I was hoping that a random murderer who would free me from
+    any amount\r of human interaction, but maybe I\u2019ll get lucky next time."
+  - "I\u2019m assuming you are here to recruit me for your village? I will join, but
+    for only one\r\nreason.\r"
+  - " I need a good laugh about how people hurt themselves. Where do I go to find
+    it?\r"
+  KeyItem1Text:
+  - " You found a water purifier? Fine, this should help those reckless morons, but
+    still won\u2019t be enough for the proper medical facility they need unless you
+    believe in Darwin. "
+  - "Unfortunately, prevention is the best way to save someone from their incompetence\u2026"
+  - ' *Sigh* this may save some, but I need some actual medical supplies to help those
+    who are sick more effectively.'
   KeyItem2Text: []
   KeyItem3Text: []
   GeneralText: []
-  PlayBackSoundFile1: {fileID: 0}
-  PlayBackSoundFile2: {fileID: 0}
-  PlayBackSoundFile3: {fileID: 0}
+  IntroSoundPlaybackStart: {fileID: 8300000, guid: 1045ab0c76334f54db6550168ecfa6c5,
+    type: 3}
+  IntroSoundPlaybackEnd: {fileID: 8300000, guid: b59b0607f8513f546893484b7cee0fc9,
+    type: 3}
+  KeyItem1Playback: {fileID: 8300000, guid: 1045ab0c76334f54db6550168ecfa6c5, type: 3}
+  KeyItem2Playback: {fileID: 8300000, guid: b59b0607f8513f546893484b7cee0fc9, type: 3}
 --- !u!114 &1315254323934297647
 MonoBehaviour:
   m_ObjectHideFlags: 0

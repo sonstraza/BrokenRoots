@@ -28,9 +28,9 @@ public class MenuController : MonoBehaviour
         }
     }
 
-    public void LoadMenu()
+    public void LoadTown()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Town");
     }
 
     public void SaveGame()

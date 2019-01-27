@@ -26,8 +26,11 @@ public class EnvironmentTileScript : MonoBehaviour
             int choiceResult = number.Next(0, 10000);
             if(choiceResult >= npcSpawnChance)
             {
-                GameObject.Instantiate(choiceOfNPC(), spawnLocation.transform);
-                hasNPCSpawned = true;
+                //GameObject.Instantiate(choiceOfNPC(), spawnLocation.transform);
+
+                Vector3 spawnOffset = new Vector3(0, 2f, 0);
+                GameObject newNPC = Instantiate(choiceOfNPC(), spawnLocation.transform.position + spawnOffset, Quaternion.identity);
+                newNPC.transform.localScale = new Vector3(3, 3, 3);
             }
         }
         

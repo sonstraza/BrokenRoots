@@ -6,7 +6,6 @@ public class EnvironmentTileScript : MonoBehaviour
 {
     public float progressionItemChance = 50f;
     public float npcSpawnChance = 999f;
-    //public float npcSpawnChance = 50f;
     public GameObject spawnLocation;
 
     ExploreGameManager _exploreGameManager;
@@ -24,7 +23,7 @@ public class EnvironmentTileScript : MonoBehaviour
         if(spawnResult >= progressionItemChance)
         {
             int choiceResult = number.Next(0, 1000);
-            if(choiceResult >= 990f)
+            if(choiceResult >= npcSpawnChance)
             {
                 GameObject.Instantiate(choiceOfNPC(), spawnLocation.transform);
             }

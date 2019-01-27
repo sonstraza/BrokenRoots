@@ -131,7 +131,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2984967453740907790}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -219,7 +219,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6758626751437745402}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -277,7 +277,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7055022335442987423}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -308,7 +308,6 @@ GameObject:
   - component: {fileID: 6716705137780374602}
   - component: {fileID: 7176320735693954908}
   - component: {fileID: 3694122657065529140}
-  - component: {fileID: 7150239016806868219}
   m_Layer: 0
   m_Name: Grass_Tile 1
   m_TagString: environment
@@ -415,20 +414,6 @@ MonoBehaviour:
   progressionItemChance: 50
   npcSpawnChance: 50
   spawnLocation: {fileID: 3034265641360290897}
---- !u!114 &7150239016806868219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9093758593391362731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
-    type: 3}
 --- !u!1 &9129965951574962394
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +454,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9129965951574962394}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -497,14 +482,6 @@ PrefabInstance:
     - target: {fileID: 100002, guid: c48375513e44b4145b034f0ab1dc9431, type: 3}
       propertyPath: m_Name
       value: TreeLeaves_textured (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c48375513e44b4145b034f0ab1dc9431, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -148
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c48375513e44b4145b034f0ab1dc9431, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -246
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c48375513e44b4145b034f0ab1dc9431, type: 3}
       propertyPath: m_LocalPosition.x
@@ -561,6 +538,14 @@ PrefabInstance:
     - target: {fileID: 400002, guid: c48375513e44b4145b034f0ab1dc9431, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.009775035
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c48375513e44b4145b034f0ab1dc9431, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -148
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c48375513e44b4145b034f0ab1dc9431, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -246
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c48375513e44b4145b034f0ab1dc9431, type: 3}
@@ -731,14 +716,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rubble_with_texture (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -156
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 530
-      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.08
@@ -794,6 +771,14 @@ PrefabInstance:
     - target: {fileID: 400006, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.004369948
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -156
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 530
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
@@ -889,14 +874,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rubble_with_texture
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -156
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 530
-      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.31
@@ -952,6 +929,14 @@ PrefabInstance:
     - target: {fileID: 400006, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.009042316
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -156
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 530
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5c96c49435c88148a1faa36f943dd8e, type: 3}

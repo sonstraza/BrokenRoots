@@ -339,20 +339,6 @@ MonoBehaviour:
   playerObject: {fileID: 0}
   destroyDistance: 20
   currentDistanceToPlayer: 0
---- !u!114 &4382943050711088779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9032132174108397162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
-    type: 3}
 --- !u!1001 &9032132174108297418
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2487,7 +2487,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1973547294}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -5752,6 +5752,10 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 681981871}
+    - target: {fileID: 1769302386, guid: c8efd0b9d2489964dba01e011bb1c681, type: 3}
+      propertyPath: textBackground
+      value: 
+      objectReference: {fileID: 2039460531}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8efd0b9d2489964dba01e011bb1c681, type: 3}
 --- !u!4 &1745631600 stripped
@@ -6329,6 +6333,32 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3186378029122714374, guid: 98c62d64b77ba784f94de7530d3ed524,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186378029122714374, guid: 98c62d64b77ba784f94de7530d3ed524,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186378029122714374, guid: 98c62d64b77ba784f94de7530d3ed524,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 07ce6a25ea92ee34f8de7f686255b74f,
+        type: 3}
+    - target: {fileID: 3186378029122714374, guid: 98c62d64b77ba784f94de7530d3ed524,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108988940442080553, guid: 98c62d64b77ba784f94de7530d3ed524,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98c62d64b77ba784f94de7530d3ed524, type: 3}
 --- !u!1001 &1986212685
@@ -6474,6 +6504,18 @@ MonoBehaviour:
   enviroTile: {fileID: 0}
   fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
     type: 3}
+--- !u!114 &2039460531 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6108988940442080553, guid: 98c62d64b77ba784f94de7530d3ed524,
+    type: 3}
+  m_PrefabInstance: {fileID: 1973547294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2107683637
 GameObject:
   m_ObjectHideFlags: 0

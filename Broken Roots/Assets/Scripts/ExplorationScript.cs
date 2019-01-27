@@ -20,12 +20,12 @@ public class ExplorationScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        if(collision.gameObject.name == "UpwardExplore")
+        if (collision.gameObject.name == "UpwardExplore")
         {
             tryToMakeTile(fogObject, new Vector3(0, 0, 200));
             tryToMakeTile(fogObject, new Vector3(-100, 0, 200));
@@ -71,5 +71,26 @@ public class ExplorationScript : MonoBehaviour
         {
             GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation, Quaternion.identity);
         }
+    }
+
+    void MakeEnvironmentTile(GameObject tileToSpawn, Vector3 newTileLocation)
+    {
+        Vector3 offset = new Vector3(0, -10, 0);
+        GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation + offset, Quaternion.identity);
+        StartCoroutine(MoveOverSeconds(gameObject, newTileLocation, 5f));
+
+    }
+
+    public IEnumerator MoveOverSeconds(GameObject objectToMove, Vector3 end, float seconds)
+    {
+        float elapsedTime = 0;
+        Vector3 startingPos = objectToMove.transform.position;
+        while (elapsedTime < seconds)
+        {
+            objectToMove.transform.position = Vector3.Lerp(startingPos, end, (elapsedTime / seconds));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        objectToMove.transform.position = end;
     }
 }

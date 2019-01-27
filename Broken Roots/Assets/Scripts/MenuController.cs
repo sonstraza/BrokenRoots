@@ -35,15 +35,11 @@ public class MenuController : MonoBehaviour
 
     public void SaveGame()
     {
-        //fill in
+        Data.SaveGame();
     }
     public void LoadGame()
     {
-        //fill in
-    }
-    public void LoadGame()
-    {
-        //fill in
+        Data.LoadGame();
     }
 
     public void Resume()
@@ -110,9 +106,3 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 }
-    public void SaveGame()
-    {
-        Data.SaveGame();
-    public void LoadGame()
-    {
-        Data.LoadGame();

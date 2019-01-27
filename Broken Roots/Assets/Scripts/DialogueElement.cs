@@ -9,7 +9,7 @@ public class DialogueElement: MonoBehaviour
     public enum AvatarPos { left, right };
     public Characters Character;
     public AvatarPos CharacterPosition;
-    public Texture2D CharacterPic;
+    public Sprite CharacterPic;
 
     public bool introducedToPlayer = false;
     public bool keyItem1DialoguePlayed = false;
@@ -25,9 +25,7 @@ public class DialogueElement: MonoBehaviour
     [TextArea(3, 10)]
     public string[] GeneralText;
 
-    public GUIStyle DialogueTextStyle;
-    public float TextPlayBackSpeed;
-    public AudioClip PlayBackSoundFile;
-
-    
+    public AudioClip PlayBackSoundFile1;
+    public AudioClip PlayBackSoundFile2;
+    public AudioClip PlayBackSoundFile3;
 }

@@ -16,13 +16,15 @@ public class DialogueManager : MonoBehaviour
     private DialogueElement dialogueElement;
     private string sentence;
     public Text dialogueBox;
+    public Image sprite;
     private readonly float textPlayBackSpeed = .1f;
 
     private void Start()
     {
         player = GetComponent<Player>();
         dialogueQueue = new Queue<string>();
-
+        dialogueBox.enabled = false;
+        sprite.enabled = false;
     }
 
     // Start the Dialogue and stop the player from moving until dialogue is finished
@@ -31,7 +33,11 @@ public class DialogueManager : MonoBehaviour
         player.canMove = false;
         dialogueQueue.Clear();
         dialogueBox.text = "";
+        sprite.sprite = dialogueElement.CharacterPic;
+
+        // Enable UI
         dialogueBox.enabled = true;
+        sprite.enabled = true;
 
         // If Intro
         dialogueTextArray = dialogueElement.IntroText;
@@ -64,9 +70,10 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         player.canMove = true;
+
         talkingToNPC = false;
         dialogueBox.enabled = false;
-        print("End of Dialogue");
+        sprite.enabled = false;
     }
     private void OnTriggerStay(Collider other)
     {

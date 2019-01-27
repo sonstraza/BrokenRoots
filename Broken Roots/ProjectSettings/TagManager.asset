@@ -4,12 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
-  - fog
   - environment
-=======
-  - NPC
->>>>>>> master
+  - fog
   layers:
   - Default
   - TransparentFX
@@ -19,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - CollidableObject
+  - 
+  - 
   - 
   - 
   - 

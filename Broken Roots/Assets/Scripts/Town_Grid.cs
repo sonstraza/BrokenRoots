@@ -5,7 +5,7 @@ public class Town_Grid : MonoBehaviour
 {
     public int divisions;//must be odd
     public GameObject GridItem;
-    public GameObject NPCPre;
+    public GameObject[] NPCPrefabList;
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class Town_Grid : MonoBehaviour
             for(int x = 0; x < divisions; x++)
             {
                 if (botLeftCorner != Center.position)
-                    Instantiate(NPCPre, botLeftCorner, Quaternion.identity);
+                    Instantiate(NPCPrefabList, botLeftCorner, Quaternion.identity);
 
                 botLeftCorner.x += size.x / (divisions);
             }

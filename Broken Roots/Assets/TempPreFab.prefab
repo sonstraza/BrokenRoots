@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6646191142760326784}
   - component: {fileID: 6646191142760326791}
   - component: {fileID: 6646191142760326790}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: TempPreFab
   m_TagString: NPC
   m_Icon: {fileID: 0}

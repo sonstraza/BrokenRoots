@@ -33,70 +33,70 @@ public class ExplorationScript : MonoBehaviour
         {
             ExploreGameManager.currentTile = collision.transform.parent.parent;
             //add at 1 tile away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.z + 100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + 100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + 100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + 100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z + 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z + 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 200, 0, currentTileTrans.position.z + 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z + 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 200, 0, currentTileTrans.position.z + 100));
             //add 2 tiles away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.z + 200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + 200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + 200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + 200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + 200));
-            //Debug.Log("UpwardExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z + 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z + 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 200, 0, currentTileTrans.position.z + 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z + 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 200, 0, currentTileTrans.position.z + 200));
+            //Debug.Log("UpwardExplore collided, Current Tile Pos: " + currentTileTrans.position);
         }
         else if (collision.gameObject.name == "DownwardExplore")
         {
             ExploreGameManager.currentTile = collision.transform.parent.parent;
             //add at 1 tile away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.z + -100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + -100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + -100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + -100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + -100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z - 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z - 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 200, 0, currentTileTrans.position.z - 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z - 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 200, 0, currentTileTrans.position.z - 100));
             //add 2 tiles away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.z + -200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + -200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + -200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + -200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + -200));
-            //Debug.Log("DownExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z - 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z - 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 200, 0, currentTileTrans.position.z - 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z - 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 200, 0, currentTileTrans.position.z - 200));
+            //Debug.Log("DownExplore collided, Current Tile Pos: " + currentTileTrans.position);
         }
         else if (collision.gameObject.name == "LeftExplore")
         {
             ExploreGameManager.currentTile = collision.transform.parent.parent;
             //add at 1 tile away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + 0));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + -100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + -200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + 100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -100, 0, currentTileTrans.transform.position.z + 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z + 0));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z - 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z - 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z + 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z + 200));
             //add 2 tiles away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + 0));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + -100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + -200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + 100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + -200, 0, currentTileTrans.transform.position.z + 200));
-            //Debug.Log("LeftExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  200, 0, currentTileTrans.position.z + 0));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  200, 0, currentTileTrans.position.z - 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  200, 0, currentTileTrans.position.z - 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  200, 0, currentTileTrans.position.z + 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  200, 0, currentTileTrans.position.z + 200));
+            //Debug.Log("LeftExplore collided, Current Tile Pos: " + currentTileTrans.position);
         }
         else if (collision.gameObject.name == "RightExplore")
         {
             ExploreGameManager.currentTile = collision.transform.parent.parent;
             //add at 1 tile away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.z + 0));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + -100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + -200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + 100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z + 0));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z - 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z - 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z + 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z + 200));
 
             //add at 2 tile away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.z + 0));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + -100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + -200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + 100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + 200));
-            //Debug.Log("RightExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z + 0));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 200, 0, currentTileTrans.position.z - 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 200, 0, currentTileTrans.position.z - 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 200, 0, currentTileTrans.position.z + 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 200, 0, currentTileTrans.position.z + 200));
+            //Debug.Log("RightExplore collided, Current Tile Pos: " + currentTileTrans.position);
         }
     }
 
@@ -109,7 +109,7 @@ public class ExplorationScript : MonoBehaviour
     /// <param name="newTileLocation"></param>
     void tryToMakeTile(GameObject tileToSpawn, Vector3 newTileLocation)
     {
-        //if (!(Physics.CheckSphere(newTileLocation, 10)))
+        if (!(Physics.CheckSphere(newTileLocation, 10)))
         {
             GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation, Quaternion.identity);
         }
@@ -124,7 +124,7 @@ public class ExplorationScript : MonoBehaviour
 
     void MakeEnvironmentTile(GameObject tileToSpawn, Vector3 newTileLocation)
     {
-        Vector3 offset = new Vector3(0, -10, 0);
+        Vector3 offset = new Vector3(0, -  10, 0);
         GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation + offset, Quaternion.identity);
         StartCoroutine(MoveOverSeconds(gameObject, newTileLocation, 5f));
     }

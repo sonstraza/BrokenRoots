@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Town_Script : MonoBehaviour
+public class Town_Script_Rand : MonoBehaviour
 {
     public GameObject[] objectsToSpawn;
     public float spawnRadius = 10.0f;

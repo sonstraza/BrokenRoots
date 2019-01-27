@@ -1,35 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WorldSpawn : MonoBehaviour
+public class Town_Grid : MonoBehaviour
 {
-
-    public GameObject block1;
-
-    public int worldWidth = 10;
-    public int worldHeight = 10;
-
-    public float spawnSpeed = 0;
+    public int divisions;//must be odd
+    public GameObject GridItem;
+    public GameObject NPCPre;
 
     void Start()
     {
-        StartCoroutine(CreateWorld());
-    }
+        Vector3 size = GridItem.GetComponent<Renderer>().bounds.size;
+        Transform Center = GridItem.gameObject.transform;
+        Vector3 botLeftCorner = Vector3.zero;
+        botLeftCorner.x = Center.position.x - size.x/2;
+        botLeftCorner.z = Center.position.z - size.z/2;
 
-    IEnumerator CreateWorld()
-    {
-        for (int x = 0; x < worldWidth; x++)
+        botLeftCorner.x += size.x / (divisions * 2);
+        botLeftCorner.z += size.z / (divisions * 2);
+
+        for(int z = 0; z < divisions; z++)
         {
-            yield return new WaitForSeconds(spawnSpeed);
-
-            for (int z = 0; z < worldHeight; z++)
+            for(int x = 0; x < divisions; x++)
             {
-                yield return new WaitForSeconds(spawnSpeed);
+                if (botLeftCorner != Center.position)
+                    Instantiate(NPCPre, botLeftCorner, Quaternion.identity);
 
-                GameObject block = Instantiate(block1, Vector3.zero, block1.transform.rotation) as GameObject;
-                block.transform.parent = transform;
-                block.transform.localPosition = new Vector3(x, 0, z);
+                botLeftCorner.x += size.x / (divisions);
             }
+            botLeftCorner.x = Center.position.x - size.x / 2;
+            botLeftCorner.x += size.x / (divisions * 2);
+
+            botLeftCorner.z += size.z / (divisions);
         }
     }
 }

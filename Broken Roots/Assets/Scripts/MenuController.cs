@@ -10,7 +10,7 @@ public class MenuController : MonoBehaviour
     Resolution[] resolutions;
     public Dropdown resolutionDropdown;
 
-    private void Start()
+    public void optionsMenu()
     {
         resolutions = Screen.resolutions;
 
@@ -20,12 +20,12 @@ public class MenuController : MonoBehaviour
 
         int currentResIndex = 0;
 
-        for(int i = 0; i < resolutions.Length; i++)
+        for (int i = 0; i < resolutions.Length; i++)
         {
             string option = resolutions[i].width + " x " + resolutions[i].height;
             options.Add(option);
 
-            if(resolutions[i].width == Screen.currentResolution.width 
+            if (resolutions[i].width == Screen.currentResolution.width
                 && resolutions[i].height == Screen.currentResolution.height)
             {
                 currentResIndex = i;

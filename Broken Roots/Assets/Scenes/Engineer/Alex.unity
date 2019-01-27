@@ -436,7 +436,7 @@ PrefabInstance:
     - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
       propertyPath: m_Name
-      value: Fog_Tile_work (4)
+      value: Top
       objectReference: {fileID: 0}
     - target: {fileID: 9032132174108430922, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
@@ -786,7 +786,7 @@ PrefabInstance:
     - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
       propertyPath: m_Name
-      value: Fog_Tile_work (5)
+      value: Top Left
       objectReference: {fileID: 0}
     - target: {fileID: 9032132174108430922, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
@@ -954,7 +954,7 @@ PrefabInstance:
     - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
       propertyPath: m_Name
-      value: Fog_Tile_work (3)
+      value: Top Right
       objectReference: {fileID: 0}
     - target: {fileID: 9032132174108430922, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
@@ -1086,7 +1086,7 @@ PrefabInstance:
     - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
       propertyPath: m_Name
-      value: Fog_Tile_work (6)
+      value: Bottom Left
       objectReference: {fileID: 0}
     - target: {fileID: 9032132174108430922, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
@@ -1583,7 +1583,7 @@ PrefabInstance:
     - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
       propertyPath: m_Name
-      value: Fog_Tile_work (2)
+      value: Left
       objectReference: {fileID: 0}
     - target: {fileID: 9032132174108430922, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
@@ -1733,7 +1733,7 @@ PrefabInstance:
     - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
       propertyPath: m_Name
-      value: Fog_Tile_work (1)
+      value: Right
       objectReference: {fileID: 0}
     - target: {fileID: 9032132174108430922, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
@@ -1901,7 +1901,7 @@ PrefabInstance:
     - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
       propertyPath: m_Name
-      value: Fog_Tile_work
+      value: Center
       objectReference: {fileID: 0}
     - target: {fileID: 9032132174108430922, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
@@ -2049,7 +2049,7 @@ PrefabInstance:
     - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
       propertyPath: m_Name
-      value: Fog_Tile_work (7)
+      value: Bottom Right
       objectReference: {fileID: 0}
     - target: {fileID: 9032132174108430922, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}

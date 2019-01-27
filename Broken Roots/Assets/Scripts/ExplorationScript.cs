@@ -9,7 +9,7 @@ public class ExplorationScript : MonoBehaviour
     GameObject playerObject;
     GameObject randomPrefabChoice;
     GameObject gameManager;
-    Transform currentTileTrans;
+    Transform currentTileTrans = ExploreGameManager.currentTile;
     public GameObject fogObject;
     // Start is called before the first frame update
     void Start()
@@ -96,11 +96,16 @@ public class ExplorationScript : MonoBehaviour
 
     void tryToMakeTile(GameObject tileToSpawn, Vector3 newTileLocation)
     {
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawSphere(newTileLocation, 5);
         if (!(Physics.CheckSphere(newTileLocation, 10)))
         {
             GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation, Quaternion.identity);
         }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        // Draw a yellow sphere at the transform's position
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(currentTileTrans.transform.position, 10);
     }
 }

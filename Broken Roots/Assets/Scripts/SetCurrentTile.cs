@@ -9,7 +9,7 @@ public class SetCurrentTile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentTileTransform = ExploreGameManager.currentTile;
+        //currentTileTransform = ExploreGameManager.currentTile;
     }
 
     // Update is called once per frame
@@ -22,7 +22,9 @@ public class SetCurrentTile : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            currentTileTransform = this.transform.parent.parent;
+            ExploreGameManager.currentTile = this.transform.parent.parent;
+
+            //currentTileTransform = this.transform.parent.parent;
         }
     }
 }

@@ -12,6 +12,9 @@ public class ExploreGameManager : MonoBehaviour
     public GameObject[] FogTileArray;
     public GameObject[] ExplorationTileArray;
 
+    [Header("Assigned Scripts")]
+    public SetCurrentTile _setCurrentTile;
+
     void Awake()
     {
         //Check if instance already exists
@@ -35,7 +38,7 @@ public class ExploreGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentTile = GameObject.Find("Player").transform;
+        //currentTile = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame

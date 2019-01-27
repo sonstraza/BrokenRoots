@@ -41,16 +41,15 @@ public class LevelTileScript : MonoBehaviour
         currentDistanceToPlayer = Mathf.Sqrt(Mathf.Abs(playerDistanceX - planeLocationX) 
                                             + Mathf.Abs(playerDistanceZ - planeLocationZ));
 
-        if (currentDistanceToPlayer >= destroyDistance && destroyThis)
+        if (currentDistanceToPlayer >= destroyDistance && destroyThis && gameObject.tag == "fog")
         {
             Destroy(this.gameObject);
-
         }
     }
 
     private void OnCollisionEnter(Collision collider)
     {
-       if(collider.gameObject.name == "hasBeenBoolCheck")
+       if(collider.gameObject.tag == "hasBeenBoolCheck")
         {
             destroyThis = false;
         }

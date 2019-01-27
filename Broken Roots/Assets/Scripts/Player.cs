@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
     private bool topCollision = false;
     private bool bottomCollision = false;
 
+    // Talking to NPC's
+    private bool canTalkToNPC;
+    private bool talkingToNPC;
 
     // Start is called before the first frame update
     void Start()
@@ -38,23 +41,6 @@ public class Player : MonoBehaviour
         collider = GetComponent<Collider>();
     }
 
-    void UpdateRayCastOrigins()
-    {
-        bottomLeft = new Vector3(collider.bounds.min.x, collider.bounds.min.y, collider.bounds.min.z);
-        bottomRight = new Vector3(collider.bounds.max.x, collider.bounds.min.y, collider.bounds.min.z);
-
-        topLeft = new Vector3(collider.bounds.min.x, collider.bounds.min.y, collider.bounds.max.z);
-        topRight = new Vector3(collider.bounds.max.x, collider.bounds.min.y, collider.bounds.max.z);
-    }
-
-    void ResetCollisions()
-    {
-        leftCollision = false;
-        rightCollision = false;
-        bottomCollision = false;
-        topCollision = false;
-    }
-    
     void Update()
     {
         UpdateRayCastOrigins();
@@ -96,10 +82,34 @@ public class Player : MonoBehaviour
                 velocity.z -= speed;
             }
         }
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.E) || Input.GetMouseButton(1)) && canTalkToNPC)
+        {
+            talkingToNPC = true;
+        }
 
         transform.position += velocity;
         velocity = Vector3.zero;
     }
+
+
+    void UpdateRayCastOrigins()
+    {
+        bottomLeft = new Vector3(collider.bounds.min.x, collider.bounds.min.y, collider.bounds.min.z);
+        bottomRight = new Vector3(collider.bounds.max.x, collider.bounds.min.y, collider.bounds.min.z);
+
+        topLeft = new Vector3(collider.bounds.min.x, collider.bounds.min.y, collider.bounds.max.z);
+        topRight = new Vector3(collider.bounds.max.x, collider.bounds.min.y, collider.bounds.max.z);
+    }
+
+    void ResetCollisions()
+    {
+        leftCollision = false;
+        rightCollision = false;
+        bottomCollision = false;
+        topCollision = false;
+    }
+    
+    
 
     void XCollisions()
     {
@@ -154,6 +164,14 @@ public class Player : MonoBehaviour
                 //velocity.x = (hit.distance - skinWidth) * dirX;
                 //rayLength = hit.distance;
             }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.tag == "NPC")
+        {
+            canTalkToNPC = true;
         }
     }
 }

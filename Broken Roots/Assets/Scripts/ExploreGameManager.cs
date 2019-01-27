@@ -7,6 +7,7 @@ public class ExploreGameManager : MonoBehaviour
     [Header("Show in Inspector")]
     public static ExploreGameManager instance = null;
     public static Transform currentTile;
+    public GameObject miniMapCam;
 
     [Header("Arrays for random spawning")]
     //public GameObject[] FogTileArray;
@@ -47,6 +48,5 @@ public class ExploreGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

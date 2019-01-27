@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static DialogueElement;
 
 public class Player : MonoBehaviour
 {
     public float speed = 5f;
 
     public bool canMove = true;
+
+    public Dictionary<Characters, bool> keyItems;
 
     #region Raycast Collision Variables
     private Vector3 velocity;
@@ -34,13 +37,14 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Dialogue System Variables
-    
+
 
     #endregion
     // Start is called before the first frame update
     void Start()
     {
         canMove = true;
+        keyItems = new Dictionary<Characters, bool>();
     }
 
     void Update()
@@ -169,7 +173,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        
+
     }
     #endregion
 }

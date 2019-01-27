@@ -29,8 +29,13 @@ public class EnvironmentTileScript : MonoBehaviour
                 //GameObject.Instantiate(choiceOfNPC(), spawnLocation.transform);
 
                 Vector3 spawnOffset = new Vector3(0, 2f, 0);
-                GameObject newNPC = Instantiate(choiceOfNPC(), spawnLocation.transform.position + spawnOffset, Quaternion.identity);
-                newNPC.transform.localScale = new Vector3(3, 3, 3);
+                GameObject choice = choiceOfNPC();
+                if(choice != null)
+                {
+                    GameObject newNPC = Instantiate(choice, spawnLocation.transform.position + spawnOffset, Quaternion.identity);
+                    newNPC.transform.localScale = new Vector3(3, 3, 3);
+                }
+                
             }
         }
         
@@ -47,6 +52,14 @@ public class EnvironmentTileScript : MonoBehaviour
     {
         System.Random rand = new System.Random();
         int npcElement = rand.Next(0, npcArr.Length - 1);
+        if(Data.npcsInTown.Contains(npcArr[npcElement].name) || ExploreGameManager.npcFound.Contains(npcArr[npcElement].name))
+        {
+            return null;
+        }
+        else
+        {
+            ExploreGameManager.npcFound.Add(npcArr[npcElement].name);
+        }
         GameObject choice = npcArr[npcElement];
         return choice;
     }

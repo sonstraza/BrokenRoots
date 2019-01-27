@@ -143,7 +143,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   divisions: 3
   GridItem: {fileID: 1278568968}
-  NPCPre: {fileID: 6646191142760326789, guid: 9b8bb8073b91ee94d9951574e49f5d8f, type: 3}
+  dummy:
+  - {fileID: 6646191142760326789, guid: 9b8bb8073b91ee94d9951574e49f5d8f, type: 3}
+  - {fileID: 6646191142760326789, guid: 9b8bb8073b91ee94d9951574e49f5d8f, type: 3}
+  - {fileID: 6646191142760326789, guid: 9b8bb8073b91ee94d9951574e49f5d8f, type: 3}
+  - {fileID: 6646191142760326789, guid: 9b8bb8073b91ee94d9951574e49f5d8f, type: 3}
+  - {fileID: 6646191142760326789, guid: 9b8bb8073b91ee94d9951574e49f5d8f, type: 3}
+  - {fileID: 6646191142760326789, guid: 9b8bb8073b91ee94d9951574e49f5d8f, type: 3}
+  - {fileID: 6646191142760326789, guid: 9b8bb8073b91ee94d9951574e49f5d8f, type: 3}
+  - {fileID: 6646191142760326789, guid: 9b8bb8073b91ee94d9951574e49f5d8f, type: 3}
 --- !u!4 &872907753
 Transform:
   m_ObjectHideFlags: 0

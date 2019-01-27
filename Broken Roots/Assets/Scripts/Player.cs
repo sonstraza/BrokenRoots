@@ -160,9 +160,11 @@ public class Player : MonoBehaviour
 
     void OnCollisionStay(Collision collisionInfo)
     {
+        Debug.Log("This..");
         if (collisionInfo.gameObject.tag == "Edge")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            
+            SceneManager.LoadScene("Scenes/Engineer/Alex");
         }
     }
 }

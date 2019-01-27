@@ -360,17 +360,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: 0
   CharacterPosition: 0
-  CharacterPic: {fileID: 0}
+  CharacterPic: {fileID: 21300000, guid: afe384e27f991194a8e749f203cbdebf, type: 3}
   introducedToPlayer: 0
   keyItem1DialoguePlayed: 0
-  IntroText: []
+  IntroText:
+  - "*Sigh* Hello, I figured you would show up. Do you have a new town set up? I might
+    not\r even try to argue with you, but I won\u2019t be any use as I don\u2019t
+    have any plants.\r"
+  - Not even a seed to make one. I just feel lost and no way to control my path through
+    life.
+  - Talking to you is somehow mildly refreshing. Maybe following you will help me
+    gain it back. Show me the way.
   KeyItem1Text: []
   KeyItem2Text: []
   KeyItem3Text: []
   GeneralText: []
-  PlayBackSoundFile1: {fileID: 0}
-  PlayBackSoundFile2: {fileID: 0}
-  PlayBackSoundFile3: {fileID: 0}
+  IntroSoundPlayback: {fileID: 8300000, guid: 9d5170ae11913f045b59da24cc576978, type: 3}
+  KeyItem1Playback: {fileID: 0}
+  KeyItem2Playback: {fileID: 0}
 --- !u!114 &7055978208665158499
 MonoBehaviour:
   m_ObjectHideFlags: 0

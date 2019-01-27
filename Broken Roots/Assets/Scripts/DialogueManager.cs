@@ -40,6 +40,29 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.enabled = true;
         sprite.enabled = true;
 
+
+        /*
+        //Botanist key item dialogue
+        if (dialogueElement.Character == Characters.Botanist && player.keyItems[dialogueElement.Character])
+        {
+
+        }
+        //Doctor key item dialogue
+        if (dialogueElement.Character == Characters.Doctor && player.keyItems[dialogueElement.Character])
+        {
+        }
+        //Farmer key item dialogue
+        if (dialogueElement.Character == Characters.Farmer && player.keyItems[dialogueElement.Character])
+        {
+        }
+        //Merchant key item dialogue
+        if (dialogueElement.Character == Characters.Merchant && player.keyItems[dialogueElement.Character])
+        {
+        }
+        */
+
+
+
         // If Intro
         dialogueTextArray = dialogueElement.IntroText;
         // If KeyItem1 for Farmer || Doctor || Botonist has beenObtained
@@ -58,9 +81,16 @@ public class DialogueManager : MonoBehaviour
     private void DisplayNextSentence()
     {
 
+        if(dialogueQueue.Count == 1)
+        {
+            player.audioSource.clip = dialogueElement.IntroSoundPlayback;
+            player.audioSource.Play();
+        }
         if (dialogueQueue.Count == 0)
         {
             EndDialogue();
+            
+            
             return;
         }
         sentence = dialogueQueue.Dequeue();
@@ -82,31 +112,11 @@ public class DialogueManager : MonoBehaviour
         {
             if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)))
             {
+                dialogueElement = other.gameObject.GetComponent<DialogueElement>();
                 if (!talkingToNPC)
                 {
-                    //Botanist key item dialogue
-                    if (dialogueElement.Character == Characters.Botanist && player.keyItems[dialogueElement.Character])
-                    {
-                    }
-                    //Doctor key item dialogue
-                    if (dialogueElement.Character == Characters.Doctor && player.keyItems[dialogueElement.Character])
-                    {
-                    }
-                    //Farmer key item dialogue
-                    if (dialogueElement.Character == Characters.Farmer && player.keyItems[dialogueElement.Character])
-                    {
-                    }
-                    //Merchant key item dialogue
-                    if (dialogueElement.Character == Characters.Merchant && player.keyItems[dialogueElement.Character])
-                    {
-                    }
-                    //Default dialogue
-                    else
-                    {
-                        talkingToNPC = true;
-                        dialogueElement = other.gameObject.GetComponent<DialogueElement>();
-                        StartDialogue();
-                    }
+                    talkingToNPC = true;
+                    StartDialogue();
                 }
                 else
                 {

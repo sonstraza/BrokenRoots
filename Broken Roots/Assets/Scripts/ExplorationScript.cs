@@ -114,8 +114,8 @@ public class ExplorationScript : MonoBehaviour
     void OnDrawGizmos()
     {
         // Draw a yellow sphere at the transform's position
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(currentTileTrans.position, 10);
+        //Gizmos.color = Color.red;
+        //Gizmos.DrawSphere(currentTileTrans.position, 10);
     }
 
     void MakeEnvironmentTile(GameObject tileToSpawn, Vector3 newTileLocation)

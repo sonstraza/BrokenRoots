@@ -43,13 +43,13 @@ public class LevelTileScript : MonoBehaviour
         currentDistanceToPlayer = Mathf.Sqrt(Mathf.Abs(playerDistanceX - planeLocationX) 
                                             + Mathf.Abs(playerDistanceZ - planeLocationZ));
 
-        Debug.Log("currentDistanceToPlayer: " + currentDistanceToPlayer);
+        //Debug.Log("currentDistanceToPlayer: " + currentDistanceToPlayer);
 
         if(currentDistanceToPlayer >= destroyDistance)
         {
             distanceToDestroy = true;
 
-            Debug.Log("DistanceToDestroy: " + distanceToDestroy);
+            //Debug.Log("DistanceToDestroy: " + distanceToDestroy);
             if (distanceToDestroy && !destroyThis)
             {
                 Destroy(this.gameObject);

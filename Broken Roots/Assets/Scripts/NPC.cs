@@ -74,9 +74,9 @@ public class NPC : MonoBehaviour
         }
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        if(collision.collider.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             canMove = false;
             canBeSpokenTo = true;

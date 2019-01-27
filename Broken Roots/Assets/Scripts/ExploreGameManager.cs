@@ -11,6 +11,8 @@ public class ExploreGameManager : MonoBehaviour
     [Header("Arrays for random spawning")]
     public GameObject[] FogTileArray;
     public GameObject[] ExplorationTileArray;
+    public static GameObject[] npcArray;
+    public static GameObject[] keyItemArray;
 
     void Awake()
     {

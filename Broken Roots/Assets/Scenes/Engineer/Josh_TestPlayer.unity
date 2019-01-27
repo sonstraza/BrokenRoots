@@ -229,17 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dcadaadb3f4a2745a0c4a5e7637474c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listOfExplorationTiles:
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
-  - {fileID: 100000, guid: d0dea2fca7472274592e0f711266d444, type: 3}
+  FogTileArray: []
+  ExplorationTileArray: []
 --- !u!1001 &510714386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -473,8 +464,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586268467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.13, y: 3.1572323, z: -0.9963608}
-  m_LocalScale: {x: 1, y: 1, z: 5.2497}
+  m_LocalPosition: {x: -4.13, y: 0.18, z: -0.9963608}
+  m_LocalScale: {x: 1, y: 2.467, z: 5.2497}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -1104,7 +1095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633796484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.95, z: 0}
+  m_LocalPosition: {x: 0, y: 0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1333867332}

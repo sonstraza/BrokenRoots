@@ -135,9 +135,9 @@ public class ExplorationScript : MonoBehaviour
 
     void MakeEnvironmentTile(GameObject tileToSpawn, Vector3 newTileLocation)
     {
-        Vector3 offset = new Vector3(0, -10, 0);
+        Vector3 offset = new Vector3(0, -20, 0);
         GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation + offset, Quaternion.identity);
-        StartCoroutine(MoveOverSeconds(gameObject, newTileLocation, 5f));
+        StartCoroutine(MoveOverSeconds(gameObject, newTileLocation, 0.5f));
     }
 
     public IEnumerator MoveOverSeconds(GameObject objectToMove, Vector3 end, float seconds)

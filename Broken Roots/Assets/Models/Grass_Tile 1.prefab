@@ -149,6 +149,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fogObject: {fileID: 0}
+--- !u!1 &3034265641360290897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270036350997515958}
+  m_Layer: 0
+  m_Name: SpawnLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1270036350997515958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034265641360290897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6170925014263870733}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6758626751437745402
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +328,7 @@ Transform:
   m_Children:
   - {fileID: 3985411179743321040}
   - {fileID: 4617329855985924990}
+  - {fileID: 1270036350997515958}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -376,7 +407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progressionItemChance: 50
   npcSpawnChance: 50
-  spawnLocation: {fileID: 0}
+  spawnLocation: {fileID: 3034265641360290897}
 --- !u!1 &9129965951574962394
 GameObject:
   m_ObjectHideFlags: 0

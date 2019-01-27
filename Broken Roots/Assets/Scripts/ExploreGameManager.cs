@@ -9,9 +9,9 @@ public class ExploreGameManager : MonoBehaviour
     public static Transform currentTile;
 
     [Header("Arrays for random spawning")]
-    public GameObject[] FogTileArray;
+    //public GameObject[] FogTileArray;
     public GameObject[] ExplorationTileArray;
-    public static GameObject[] npcArray;
+    public GameObject[] npcArray;
     public static GameObject[] keyItemArray;
 
     [Header("Assigned Scripts")]

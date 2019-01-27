@@ -14,6 +14,10 @@ public class ExploreGameManager : MonoBehaviour
     public static GameObject[] npcArray;
     public static GameObject[] keyItemArray;
 
+    [Header("Assigned Scripts")]
+    public SetCurrentTile _setCurrentTile;
+
+    //Awake for singleton creation
     void Awake()
     {
         //Check if instance already exists
@@ -37,7 +41,7 @@ public class ExploreGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentTile = GameObject.Find("Player").transform;
+        currentTile = GameObject.Find("StartTile").transform;
     }
 
     // Update is called once per frame

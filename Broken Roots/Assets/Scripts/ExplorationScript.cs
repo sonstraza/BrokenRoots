@@ -80,25 +80,32 @@ public class ExplorationScript : MonoBehaviour
         else if (collision.gameObject.name == "RightExplore")
         {
             //add at 1 tile away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.x + 0));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.x + -100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.x + -200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.x + 100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.x + 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.z + 0));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + -100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + -200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 100, 0, currentTileTrans.transform.position.z + 200));
 
             //add at 2 tile away
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.x + 0));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.x + -100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.x + -200));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.x + 100));
-            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.x + 200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 0, 0, currentTileTrans.transform.position.z + 0));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + -100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + -200));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + 100));
+            tryToMakeTile(fogObject, new Vector3(currentTileTrans.transform.position.x + 200, 0, currentTileTrans.transform.position.z + 200));
             Debug.Log("RightExplore collided, Current Tile Pos: " + currentTileTrans.transform.position);
         }
     }
 
+    /// <summary>
+    /// Takes in a the fog tile GameObject and sets it to the input vector3.
+    /// 
+    /// When called has an offset
+    /// </summary>
+    /// <param name="tileToSpawn"></param>
+    /// <param name="newTileLocation"></param>
     void tryToMakeTile(GameObject tileToSpawn, Vector3 newTileLocation)
     {
-        if (!(Physics.CheckSphere(newTileLocation, 10)))
+        //if (!(Physics.CheckSphere(newTileLocation, 10)))
         {
             GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation, Quaternion.identity);
         }
@@ -108,7 +115,7 @@ public class ExplorationScript : MonoBehaviour
     {
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.red;
-        Gizmos.DrawSphere(currentTileTrans.transform.position, 10);
+        Gizmos.DrawSphere(currentTileTrans.position, 10);
     }
 
     void MakeEnvironmentTile(GameObject tileToSpawn, Vector3 newTileLocation)

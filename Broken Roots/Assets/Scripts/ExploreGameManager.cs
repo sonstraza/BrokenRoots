@@ -15,6 +15,7 @@ public class ExploreGameManager : MonoBehaviour
     [Header("Assigned Scripts")]
     public SetCurrentTile _setCurrentTile;
 
+    //Awake for singleton creation
     void Awake()
     {
         //Check if instance already exists

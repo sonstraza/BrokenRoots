@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SetCurrentTile : MonoBehaviour
 {
-    Transform currentTileTransform;
+    GameObject currentTileTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +23,6 @@ public class SetCurrentTile : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             ExploreGameManager.currentTile = this.transform.parent.parent;
-
-            //currentTileTransform = this.transform.parent.parent;
         }
     }
 }

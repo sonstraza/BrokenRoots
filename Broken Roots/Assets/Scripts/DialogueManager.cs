@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     private string sentence;
     public Text dialogueBox;
     public Image sprite;
+    public Image textBackground;
     private readonly float textPlayBackSpeed = .1f;
 
     private void Start()
@@ -26,6 +27,7 @@ public class DialogueManager : MonoBehaviour
         dialogueQueue = new Queue<string>();
         dialogueBox.enabled = false;
         sprite.enabled = false;
+        textBackground.enabled = false;
     }
 
     // Start the Dialogue and stop the player from moving until dialogue is finished
@@ -39,6 +41,7 @@ public class DialogueManager : MonoBehaviour
         // Enable UI
         dialogueBox.enabled = true;
         sprite.enabled = true;
+        textBackground.enabled = true;
 
         if (!dialogueElement.introducedToPlayer)
         {
@@ -119,6 +122,7 @@ public class DialogueManager : MonoBehaviour
         talkingToNPC = false;
         dialogueBox.enabled = false;
         sprite.enabled = false;
+        textBackground.enabled = false;
     }
     private void OnTriggerStay(Collider other)
     {

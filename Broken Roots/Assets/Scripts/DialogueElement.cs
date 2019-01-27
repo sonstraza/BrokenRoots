@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogueElement: MonoBehaviour
 {
     public enum Characters { Farmer, Doctor, Botanist, Merchant };
-    public GameObject CharacterPrefab;
+    public string CharacterPrefab;
 
     public enum AvatarPos { left, right };
     public Characters Character;

@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 1769302387}
   - component: {fileID: 1769302386}
   m_Layer: 0
-  m_Name: Player
+  m_Name: ExplorePlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,6 +196,8 @@ MonoBehaviour:
   zRayCount: 6
   zRaySpacing: 0.4
   audioSource: {fileID: 0}
+  clip1: {fileID: 0}
+  clip2: {fileID: 0}
 --- !u!65 &4851055769617725272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -221,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfa68b23e82f304eaea6a7fba253b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enviroTile: {fileID: 0}
   fogObject: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
     type: 3}
 --- !u!54 &7795297446598211525
@@ -349,3 +352,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 0}
   sprite: {fileID: 0}
+  textBackground: {fileID: 0}

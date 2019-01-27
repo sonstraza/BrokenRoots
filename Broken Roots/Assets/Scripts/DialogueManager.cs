@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     private string sentence;
     public Text dialogueBox;
     public Image sprite;
+    public Image textBackground;
     private readonly float textPlayBackSpeed = .1f;
 
     private void Start()
@@ -26,6 +27,7 @@ public class DialogueManager : MonoBehaviour
         dialogueQueue = new Queue<string>();
         dialogueBox.enabled = false;
         sprite.enabled = false;
+        textBackground.enabled = false;
     }
 
     // Start the Dialogue and stop the player from moving until dialogue is finished
@@ -39,16 +41,27 @@ public class DialogueManager : MonoBehaviour
         // Enable UI
         dialogueBox.enabled = true;
         sprite.enabled = true;
+        textBackground.enabled = true;
 
         if (!dialogueElement.introducedToPlayer)
         {
             dialogueTextArray = dialogueElement.IntroText;
-            dialogueElement.introducedToPlayer = true;          
+            dialogueElement.introducedToPlayer = true;
+            player.clip1 = dialogueElement.IntroSoundPlaybackStart;
+            player.clip2 = dialogueElement.IntroSoundPlaybackEnd;
         }
-        else if (player.keyItems[dialogueElement.Character] && dialogueElement.keyItem1DialoguePlayed)
+        else if (player.keyItems.ContainsKey(dialogueElement.Character) && dialogueElement.keyItem1DialoguePlayed)
         {
             dialogueTextArray = dialogueElement.KeyItem1Text;
             dialogueElement.keyItem1DialoguePlayed = true;
+            player.clip1 = dialogueElement.KeyItem1Playback;
+            player.clip2 = dialogueElement.KeyItem2Playback;
+        }
+        else
+        {
+            dialogueTextArray = dialogueElement.GeneralText;
+            player.clip1 = dialogueElement.IntroSoundPlaybackStart;
+            player.clip2 = dialogueElement.IntroSoundPlaybackEnd;
         }
         
 
@@ -87,7 +100,7 @@ public class DialogueManager : MonoBehaviour
             dialogueQueue.Enqueue(sentence);
         }
 
-        player.audioSource.clip = dialogueElement.IntroSoundPlaybackStart;
+        player.audioSource.clip = player.clip1;
         player.audioSource.Play();
 
         DisplayNextSentence();
@@ -97,7 +110,7 @@ public class DialogueManager : MonoBehaviour
 
         if(dialogueQueue.Count == 1)
         {
-            player.audioSource.clip = dialogueElement.IntroSoundPlaybackEnd;
+            player.audioSource.clip = player.clip2;
             player.audioSource.Play();
         }
         if (dialogueQueue.Count == 0)
@@ -119,6 +132,7 @@ public class DialogueManager : MonoBehaviour
         talkingToNPC = false;
         dialogueBox.enabled = false;
         sprite.enabled = false;
+        textBackground.enabled = false;
     }
     private void OnTriggerStay(Collider other)
     {
@@ -139,7 +153,9 @@ public class DialogueManager : MonoBehaviour
 
                 if (!Data.npcsInTown.Contains(dialogueElement.CharacterPrefab))
                 {
+                    //Data.npcsInTown.Add(dialogueElement.CharacterPrefab);
                     Data.npcsInTown.Add(dialogueElement.CharacterPrefab);
+                    //Resources.Load(this.gameObject.name);
                 }
             }
             

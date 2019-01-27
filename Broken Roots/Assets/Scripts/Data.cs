@@ -28,7 +28,7 @@ public class CharacterData
 public static class Data
 {
     //Send in from game
-    public static List<GameObject> npcsInTown = new List<GameObject>();
+    public static List<string> npcsInTown = new List<string>();
     //Send in from game
     public static List<GameObject> keyItem = new List<GameObject>();
     public static CharacterData charaData = new CharacterData();
@@ -56,9 +56,9 @@ public static class Data
     public static void SaveGame()
     {
         //Iterates through all NPCs storing only the name of the prefab as strings
-        foreach (GameObject npc in npcsInTown)
+        foreach (string npc in npcsInTown)
         {
-            charaData.NPCNames.Add(npc.name);
+            charaData.NPCNames.Add(npc);
         }
         //Iterates through all key items storing only the name of the prefab as strings
         foreach (GameObject item in keyItem)
@@ -100,7 +100,7 @@ public static class Data
 
         foreach (string npcName in charaData.NPCNames)
         {
-            npcsInTown.Add((GameObject)Resources.Load(npcName));
+            npcsInTown.Add(npcName);
         }
         // TODO: Load item prefabs, load gold
     }

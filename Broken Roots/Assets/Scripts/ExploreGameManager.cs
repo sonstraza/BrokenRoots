@@ -13,7 +13,7 @@ public class ExploreGameManager : MonoBehaviour
     //public GameObject[] FogTileArray;
     public GameObject[] ExplorationTileArray;
     public GameObject[] npcArray;
-    public static List<GameObject>[] npcFound;
+    public static List<string> npcFound;
     public static GameObject[] keyItemArray;
 
     //[Header("Assigned Scripts")]
@@ -44,6 +44,7 @@ public class ExploreGameManager : MonoBehaviour
     void Start()
     {
         currentTile = GameObject.Find("StartTile").transform;
+        npcFound = new List<string>();
     }
 
     // Update is called once per frame

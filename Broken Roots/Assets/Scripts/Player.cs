@@ -43,6 +43,9 @@ public class Player : MonoBehaviour
     #endregion
 
     public AudioSource audioSource;
+
+    public AudioClip clip1;
+    public AudioClip clip2;
     
     // Start is called before the first frame update
     void Start()

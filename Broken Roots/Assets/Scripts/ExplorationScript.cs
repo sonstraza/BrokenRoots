@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExplorationScript : MonoBehaviour
 {
     [Header("Show In Inspector")]
-
+    
     GameObject playerObject;
     GameObject randomPrefabChoice;
     GameObject gameManager;
@@ -31,7 +31,7 @@ public class ExplorationScript : MonoBehaviour
     {
         if (collision.gameObject.name == "UpwardExplore")
         {
-            ExploreGameManager.currentTile = collision.transform.parent.parent;
+            currentTileTrans = collision.transform.parent.parent;
             //add at 1 tile away
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z + 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z + 100));
@@ -48,7 +48,7 @@ public class ExplorationScript : MonoBehaviour
         }
         else if (collision.gameObject.name == "DownwardExplore")
         {
-            ExploreGameManager.currentTile = collision.transform.parent.parent;
+            currentTileTrans = collision.transform.parent.parent;
             //add at 1 tile away
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z - 100));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x - 100, 0, currentTileTrans.position.z - 100));
@@ -65,7 +65,7 @@ public class ExplorationScript : MonoBehaviour
         }
         else if (collision.gameObject.name == "LeftExplore")
         {
-            ExploreGameManager.currentTile = collision.transform.parent.parent;
+            currentTileTrans = collision.transform.parent.parent;
             //add at 1 tile away
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z + 0));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x -  100, 0, currentTileTrans.position.z - 100));
@@ -82,7 +82,8 @@ public class ExplorationScript : MonoBehaviour
         }
         else if (collision.gameObject.name == "RightExplore")
         {
-            ExploreGameManager.currentTile = collision.transform.parent.parent;
+            currentTileTrans = collision.transform.parent.parent;
+            
             //add at 1 tile away
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 0, 0, currentTileTrans.position.z + 0));
             tryToMakeTile(fogObject, new Vector3(currentTileTrans.position.x + 100, 0, currentTileTrans.position.z - 100));
@@ -124,7 +125,7 @@ public class ExplorationScript : MonoBehaviour
 
     void MakeEnvironmentTile(GameObject tileToSpawn, Vector3 newTileLocation)
     {
-        Vector3 offset = new Vector3(0, -  10, 0);
+        Vector3 offset = new Vector3(0, -10, 0);
         GameObject newTileInstance = GameObject.Instantiate(tileToSpawn, newTileLocation + offset, Quaternion.identity);
         StartCoroutine(MoveOverSeconds(gameObject, newTileLocation, 5f));
     }

@@ -6,10 +6,11 @@ public class Player : MonoBehaviour
 {
     public float speed = 5f;
 
+    public bool canMove = true;
+
+    #region Raycast Collision Variables
     private Vector3 velocity;
     private float skinWidth = 0.1f;
-
-    private Collider collider;
 
     // X-Direction collisions
     public int xRayCount = 5;
@@ -30,21 +31,76 @@ public class Player : MonoBehaviour
 
     private bool topCollision = false;
     private bool bottomCollision = false;
+    #endregion
 
+    #region Dialogue System Variables
+    
 
+    #endregion
     // Start is called before the first frame update
     void Start()
     {
-        collider = GetComponent<Collider>();
+        canMove = true;
     }
 
+    void Update()
+    {
+        UpdateRayCastOrigins();
+        ResetCollisions();
+
+        if (canMove)
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                velocity.x -= speed;
+                XCollisions();
+                if (leftCollision)
+                {
+                    velocity.x += speed;
+                }
+            }
+            if (!rightCollision && Input.GetKey(KeyCode.D))
+            {
+                velocity.x += speed;
+                XCollisions();
+                if (rightCollision)
+                {
+                    velocity.x -= speed;
+                }
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                velocity.z -= speed;
+                ZCollisions();
+                if (bottomCollision)
+                {
+                    velocity.z += speed;
+                }
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                velocity.z += speed;
+                ZCollisions();
+                if (topCollision)
+                {
+                    velocity.z -= speed;
+                }
+            }
+
+
+            transform.position += velocity;
+            velocity = Vector3.zero;
+        }
+    }
+
+    #region Collisions
     void UpdateRayCastOrigins()
     {
-        bottomLeft = new Vector3(collider.bounds.min.x, collider.bounds.min.y, collider.bounds.min.z);
-        bottomRight = new Vector3(collider.bounds.max.x, collider.bounds.min.y, collider.bounds.min.z);
+        bottomLeft = new Vector3(GetComponent<Collider>().bounds.min.x, GetComponent<Collider>().bounds.min.y, GetComponent<Collider>().bounds.min.z);
+        bottomRight = new Vector3(GetComponent<Collider>().bounds.max.x, GetComponent<Collider>().bounds.min.y, GetComponent<Collider>().bounds.min.z);
 
-        topLeft = new Vector3(collider.bounds.min.x, collider.bounds.min.y, collider.bounds.max.z);
-        topRight = new Vector3(collider.bounds.max.x, collider.bounds.min.y, collider.bounds.max.z);
+        topLeft = new Vector3(GetComponent<Collider>().bounds.min.x, GetComponent<Collider>().bounds.min.y, GetComponent<Collider>().bounds.max.z);
+        topRight = new Vector3(GetComponent<Collider>().bounds.max.x, GetComponent<Collider>().bounds.min.y, GetComponent<Collider>().bounds.max.z);
     }
 
     void ResetCollisions()
@@ -53,52 +109,6 @@ public class Player : MonoBehaviour
         rightCollision = false;
         bottomCollision = false;
         topCollision = false;
-    }
-    
-    void Update()
-    {
-        UpdateRayCastOrigins();
-        ResetCollisions();
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            velocity.x -= speed;
-            XCollisions();
-            if (leftCollision)
-            {
-                velocity.x += speed;
-            }
-        }
-        if (!rightCollision && Input.GetKey(KeyCode.D))
-        {
-            velocity.x += speed;
-            XCollisions();
-            if (rightCollision)
-            {
-                velocity.x -= speed;
-            }
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            velocity.z -= speed;
-            ZCollisions();
-            if (bottomCollision)
-            {
-                velocity.z += speed;
-            }
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            velocity.z += speed;
-            ZCollisions();
-            if (topCollision)
-            {
-                velocity.z -= speed;
-            }
-        }
-
-        transform.position += velocity;
-        velocity = Vector3.zero;
     }
 
     void XCollisions()
@@ -156,4 +166,10 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        
+    }
+    #endregion
 }

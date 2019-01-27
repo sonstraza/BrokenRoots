@@ -286,7 +286,7 @@ PrefabInstance:
     - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
       propertyPath: m_Name
-      value: Fog_Tile_work (8)
+      value: Bottom
       objectReference: {fileID: 0}
     - target: {fileID: 9032132174108430922, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
@@ -650,6 +650,7 @@ MonoBehaviour:
   - {fileID: 9093758593391362731, guid: 51819bd5a82507c4e813fdeadb1565bc, type: 3}
   - {fileID: 9093758593391362731, guid: 51819bd5a82507c4e813fdeadb1565bc, type: 3}
   - {fileID: 9093758593391362731, guid: 51819bd5a82507c4e813fdeadb1565bc, type: 3}
+  _setCurrentTile: {fileID: 0}
 --- !u!1 &532229686 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1453090173, guid: 99e8e77637c1230418c25af04fda34f4,
@@ -1901,7 +1902,7 @@ PrefabInstance:
     - target: {fileID: 9032132174108397162, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}
       propertyPath: m_Name
-      value: Center
+      value: StartTile
       objectReference: {fileID: 0}
     - target: {fileID: 9032132174108430922, guid: 99e8e77637c1230418c25af04fda34f4,
         type: 3}

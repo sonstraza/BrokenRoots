@@ -38,7 +38,7 @@ public class ExploreGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //currentTile = GameObject.Find("Player").transform;
+        currentTile = GameObject.Find("StartTile").transform;
     }
 
     // Update is called once per frame

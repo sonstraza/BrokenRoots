@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static DialogueElement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class DialogueManager : MonoBehaviour
         dialogueTextArray = dialogueElement.IntroText;
         // If KeyItem1 for Farmer || Doctor || Botonist has beenObtained
         //dialogueTextArray = dialogueElement.KeyItem1Text;
-        
+
         // If General Text
         //dialogueTextArray = dialogueElement.GeneralText;
 
@@ -56,7 +57,7 @@ public class DialogueManager : MonoBehaviour
     }
     private void DisplayNextSentence()
     {
-        
+
         if (dialogueQueue.Count == 0)
         {
             EndDialogue();
@@ -64,7 +65,7 @@ public class DialogueManager : MonoBehaviour
         }
         sentence = dialogueQueue.Dequeue();
         dialogueBox.text = sentence;
-        
+
     }
 
     private void EndDialogue()
@@ -83,10 +84,29 @@ public class DialogueManager : MonoBehaviour
             {
                 if (!talkingToNPC)
                 {
-                    talkingToNPC = true;
-                    dialogueElement = other.gameObject.GetComponent<DialogueElement>();
-                    StartDialogue();
-                    
+                    //Botanist key item dialogue
+                    if (dialogueElement.Character == Characters.Botanist && player.keyItems[dialogueElement.Character])
+                    {
+                    }
+                    //Doctor key item dialogue
+                    if (dialogueElement.Character == Characters.Doctor && player.keyItems[dialogueElement.Character])
+                    {
+                    }
+                    //Farmer key item dialogue
+                    if (dialogueElement.Character == Characters.Farmer && player.keyItems[dialogueElement.Character])
+                    {
+                    }
+                    //Merchant key item dialogue
+                    if (dialogueElement.Character == Characters.Merchant && player.keyItems[dialogueElement.Character])
+                    {
+                    }
+                    //Default dialogue
+                    else
+                    {
+                        talkingToNPC = true;
+                        dialogueElement = other.gameObject.GetComponent<DialogueElement>();
+                        StartDialogue();
+                    }
                 }
                 else
                 {

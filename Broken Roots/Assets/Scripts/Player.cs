@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -164,6 +165,16 @@ public class Player : MonoBehaviour
                 //velocity.x = (hit.distance - skinWidth) * dirX;
                 //rayLength = hit.distance;
             }
+        }
+    }
+
+    void OnCollisionStay(Collision collisionInfo)
+    {
+        Debug.Log("This..");
+        if (collisionInfo.gameObject.tag == "Edge")
+        {
+            
+            SceneManager.LoadScene("Scenes/Engineer/Alex");
         }
     }
 

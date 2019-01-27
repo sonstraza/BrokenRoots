@@ -11,6 +11,51 @@ public class MenuController : MonoBehaviour
     public Dropdown resolutionDropdown;
     public AudioMixer audioMixer;
 
+    public static bool GameIsPaused = false;
+
+    public GameObject pauseMenuUI;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+                Resume();
+            else if (SceneManager.GetActiveScene().name == "Menu")
+                QuitGame();
+            else
+                Paused();
+        }
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void SaveGame()
+    {
+        //fill in
+    }
+    public void LoadGame()
+    {
+        //fill in
+    }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1.0f;
+        GameIsPaused = false;
+    }
+
+    void Paused()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
     public void optionsMenu()
     {
         resolutions = Screen.resolutions;

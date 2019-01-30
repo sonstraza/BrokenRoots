@@ -10,7 +10,7 @@ public class GoToExplore : MonoBehaviour
     {
         if (ChangeScene.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Alex");
+            SceneManager.LoadScene("Explore");
         }
     }
 }

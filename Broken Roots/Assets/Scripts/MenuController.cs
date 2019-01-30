@@ -28,6 +28,24 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    public void PauseGame()
+    {
+        if (GameIsPaused)
+            Resume();
+        else if (SceneManager.GetActiveScene().name == "Menu")
+            QuitGame();
+        else
+            Paused();
+    }
+
+    public void LoadMenu()
+    {
+        if (GameIsPaused)
+            GameIsPaused = false;
+
+        SceneManager.LoadScene("Menu");
+    }
+
     public void LoadTown()
     {
         SceneManager.LoadScene("Town");
@@ -97,7 +115,7 @@ public class MenuController : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("Scenes/Engineer/Alex");
+        SceneManager.LoadScene("Explore");
     }
 
     public void QuitGame()
